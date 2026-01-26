@@ -14,11 +14,15 @@ const Footer = () => {
             transition={{ duration: 0.5 }}
           >
             <div className="flex items-center gap-2 mb-4">
-              <div className="w-10 h-10 rounded-xl bg-electric flex items-center justify-center">
-                <Database className="w-5 h-5 text-accent-foreground" />
-              </div>
-              <span className="text-xl font-bold">DataDriven</span>
-            </div>
+  <div className="w-10 h-10 rounded-xl bg-electric flex items-center justify-center overflow-hidden">
+    <img 
+      src="/logo.jpg" 
+      alt="Logo Henrique Arsego" 
+      className="w-full h-full object-cover" 
+    />
+  </div>
+  <span className="text-xl font-bold">Henrique Arsego</span>
+</div>
             <p className="text-primary-foreground/70 leading-relaxed">
               Consultoria especializada em Marketing Digital e Data Intelligence. 
               Transformando dados em decisões estratégicas.
@@ -56,15 +60,10 @@ const Footer = () => {
                   +55 51 99671-9696
                 </a>
               </li>
-              <li className="flex items-center gap-3">
-                <Mail className="w-4 h-4 text-electric" />
-                <a href="mailto:contato@datadriven.com.br" className="hover:text-electric transition-colors">
-                  contato@datadriven.com.br
-                </a>
-              </li>
+              
               <li className="flex items-center gap-3">
                 <MapPin className="w-4 h-4 text-electric" />
-                <span>Porto Alegre, RS - Brasil</span>
+                <span>Chapecó, SC - Brasil</span>
               </li>
             </ul>
           </motion.div>
@@ -73,7 +72,7 @@ const Footer = () => {
         {/* Divider */}
         <div className="border-t border-primary-foreground/10 pt-8">
           <div className="flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-primary-foreground/50">
-            <p>© 2024 DataDriven. Todos os direitos reservados.</p>
+            <p>© 2026 Henrique Arsego. Todos os direitos reservados.</p>
             <div className="flex items-center gap-6">
               <span className="hover:text-electric transition-colors cursor-pointer">Política de Privacidade</span>
               <span className="hover:text-electric transition-colors cursor-pointer">Termos de Uso</span>

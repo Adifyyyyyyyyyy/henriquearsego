@@ -4,8 +4,8 @@ import { Crosshair, Workflow, LineChart, TrendingUp, Code2, Settings, Zap, Targe
 const features = [
   {
     icon: Crosshair,
-    title: "Rastreamento de Precisão",
-    description: "Implementação de API de Conversões (CAPI) para contornar perdas do iOS14 e garantir dados precisos para suas campanhas.",
+    title: "Rastreamento com Precisão",
+    description: "Implementação de API de Conversões (CAPI) para contornar perdas das UTMs e garantir dados precisos para suas campanhas.",
     gradient: "from-blue-500/10 to-cyan-500/10",
     iconBg: "bg-blue-500/10",
     iconColor: "text-blue-600",
@@ -23,7 +23,7 @@ const features = [
   {
     icon: LineChart,
     title: "Dashboards em Tempo Real",
-    description: "Visualização clara do ROI e ROAS sem relatórios manuais. Dados atualizados minuto a minuto.",
+    description: "Visualização clara de leads e vendas sem relatórios manuais. Dados atualizados minuto a minuto.",
     gradient: "from-emerald-500/10 to-teal-500/10",
     iconBg: "bg-emerald-500/10",
     iconColor: "text-emerald-600",
@@ -145,8 +145,8 @@ const BentoGrid = () => {
           className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-8"
         >
           {[
-            { value: "98%", label: "Taxa de Precisão" },
-            { value: "-40%", label: "Redução de Custo" },
+            { value: "98%", label: "Taxa de Precisão no tracking" },
+            { value: "40%", label: "Redução de Custo por Oportunidade" },
             { value: "2x", label: "Velocidade de Dados" },
             { value: "24/7", label: "Monitoramento" },
           ].map((stat) => (

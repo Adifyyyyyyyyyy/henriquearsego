@@ -30,7 +30,7 @@ const steps = [
 ];
 
 const ProcessTimeline = () => {
-  const whatsappLink = "https://wa.me/5551996719696?text=Olá! Gostaria de agendar um diagnóstico gratuito.";
+  const whatsappLink = "https://wa.me/5551996719696?text=Olá! Gostaria de agendar um diagnóstico para minha empresa.";
 
   return (
     <section className="py-24 lg:py-32 bg-surface-subtle">
@@ -103,23 +103,33 @@ const ProcessTimeline = () => {
         </div>
 
         {/* CTA */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5, delay: 0.4 }}
-          className="text-center mt-16"
-        >
-          <p className="text-charcoal-muted mb-6">
-            Pronto para começar sua transformação de dados?
-          </p>
-          <Button variant="cta" size="xl" asChild className="group">
-            <a href={whatsappLink} target="_blank" rel="noopener noreferrer">
-              Agendar Diagnóstico Gratuito
-              <ArrowRight className="transition-transform group-hover:translate-x-1" />
-            </a>
-          </Button>
-        </motion.div>
+<motion.div
+  initial={{ opacity: 0, y: 20 }}
+  whileInView={{ opacity: 1, y: 0 }}
+  viewport={{ once: true }}
+  transition={{ duration: 0.5, delay: 0.4 }}
+  className="text-center mt-16 px-4" // Adicionado padding lateral para telas pequenas
+>
+  <p className="text-charcoal-muted mb-6">
+    Pronto para começar sua transformação de dados?
+  </p>
+  <Button 
+    variant="cta" 
+    size="xl" 
+    asChild 
+    className="group h-auto py-4 px-8 whitespace-normal max-w-full"
+  >
+    <a 
+      href={whatsappLink} 
+      target="_blank" 
+      rel="noopener noreferrer" 
+      className="flex items-center justify-center gap-2 text-center"
+    >
+      <span className="flex-1">Agendar Diagnóstico Gratuito</span>
+      <ArrowRight className="shrink-0 transition-transform group-hover:translate-x-1" />
+    </a>
+  </Button>
+</motion.div>
       </div>
     </section>
   );

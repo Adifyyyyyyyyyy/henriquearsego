@@ -5,6 +5,7 @@ import AntiAgencySection from "@/components/AntiAgencySection";
 import ProcessTimeline from "@/components/ProcessTimeline";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
+import SpecialistSection from "@/components/SpecialistSection";
 
 const Index = () => {
   return (
@@ -13,6 +14,7 @@ const Index = () => {
       <main>
         <HeroSection />
         <BentoGrid />
+        <SpecialistSection />
         <div id="comparativo">
           <AntiAgencySection />
         </div>

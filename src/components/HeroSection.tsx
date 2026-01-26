@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight, BarChart3, Database, Zap } from "lucide-react";
 
 const HeroSection = () => {
-  const whatsappLink = "https://wa.me/5551996719696?text=Olá! Gostaria de agendar um diagnóstico gratuito.";
+  const whatsappLink = "https://wa.me/5551996719696?text=Olá! Gostaria de agendar um diagnóstico para minha empresa.";
 
   return (
     <section className="relative min-h-screen flex items-center section-gradient overflow-hidden">
@@ -49,7 +49,7 @@ const HeroSection = () => {
           >
             Sua operação de marketing{" "}
             <span className="relative">
-              <span className="relative z-10">não precisa de mais cliques</span>
+              <span className="relative z-10">não precisa de mais tráfego</span>
               <span className="absolute bottom-2 left-0 right-0 h-3 bg-electric/20 -z-0" />
             </span>
             ,{" "}
@@ -78,16 +78,23 @@ const HeroSection = () => {
             className="flex flex-col sm:flex-row items-center justify-center gap-4"
           >
             <Button 
-              variant="cta" 
-              size="xl" 
-              asChild
-              className="group"
-            >
-              <a href={whatsappLink} target="_blank" rel="noopener noreferrer">
-                Agendar Diagnóstico Gratuito
-                <ArrowRight className="transition-transform group-hover:translate-x-1" />
-              </a>
-            </Button>
+    variant="cta" 
+    size="xl" 
+    asChild
+    className="group h-auto min-h-[64px] py-4 px-6 whitespace-normal w-full sm:w-auto max-w-[400px]"
+  >
+    <a 
+      href={whatsappLink} 
+      target="_blank" 
+      rel="noopener noreferrer"
+      className="flex items-center justify-center gap-3 text-center"
+    >
+      <span className="flex-1 leading-tight">
+        Agendar Diagnóstico Gratuito
+      </span>
+      <ArrowRight className="shrink-0 transition-transform group-hover:translate-x-1" />
+    </a>
+  </Button>
             <Button variant="outline" size="lg" asChild>
               <a href="#diferenciais">
                 Ver Diferenciais
@@ -108,11 +115,11 @@ const HeroSection = () => {
             </div>
             <div className="flex items-center gap-2">
               <div className="w-2 h-2 rounded-full bg-green-500" />
-              <span>+150 empresas atendidas</span>
+              <span>+78 empresas atendidas</span>
             </div>
             <div className="flex items-center gap-2">
               <div className="w-2 h-2 rounded-full bg-green-500" />
-              <span>ROI médio de 3.5x</span>
+              <span>+R$2m auditados</span>
             </div>
           </motion.div>
         </div>

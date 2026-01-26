@@ -12,7 +12,7 @@ const navLinks = [
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const whatsappLink = "https://wa.me/5551996719696?text=Olá! Gostaria de agendar um diagnóstico gratuito.";
+  const whatsappLink = "https://wa.me/5551996719696?text=Olá! Gostaria de agendar um diagnóstico para minha empresa.";
 
   useEffect(() => {
     const handleScroll = () => {
@@ -36,12 +36,16 @@ const Header = () => {
       <div className="container">
         <div className="flex items-center justify-between h-16 lg:h-20">
           {/* Logo */}
-          <a href="/" className="flex items-center gap-2">
-            <div className="w-9 h-9 rounded-lg bg-electric flex items-center justify-center">
-              <Database className="w-5 h-5 text-accent-foreground" />
-            </div>
-            <span className="text-lg font-bold text-charcoal">DataDriven</span>
-          </a>
+<a href="/" className="flex items-center gap-2">
+  <div className="w-9 h-9 rounded-lg bg-electric flex items-center justify-center overflow-hidden">
+    <img 
+      src="/logo.jpg" 
+      alt="Logo Henrique Arsego" 
+      className="w-full h-full object-cover" 
+    />
+  </div>
+  <span className="text-lg font-bold text-charcoal">Henrique Arsego</span>
+</a>
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center gap-8">
