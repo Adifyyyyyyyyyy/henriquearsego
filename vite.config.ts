@@ -8,6 +8,10 @@ export default defineConfig(({ mode }) => ({
   server: {
     host: "::",
     port: 8080,
+    allowedHosts: [
+      "henriquearsego.com.br",
+      "www.henriquearsego.com.br"
+    ],
     hmr: {
       overlay: false,
     },
