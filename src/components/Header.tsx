@@ -7,7 +7,7 @@ const navLinks = [
   { label: "Diferenciais", href: "#diferenciais" },
   { label: "Comparativo", href: "#comparativo" },
   { label: "Processo", href: "#processo" },
-  { label: "Blog", href: "https://blog.henriquerasego.com.br" },
+  { label: "Blog", href: "https://blog.henriquearsego.com.br" },
 ];
 
 const Header = () => {
