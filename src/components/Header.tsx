@@ -28,25 +28,24 @@ const Header = () => {
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       transition={{ duration: 0.5 }}
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled
           ? "bg-background/95 backdrop-blur-md shadow-sm border-b border-charcoal/5"
           : "bg-transparent"
-      }`}
+        }`}
     >
       <div className="container">
         <div className="flex items-center justify-between h-16 lg:h-20">
           {/* Logo */}
-<a href="/" className="flex items-center gap-2">
-  <div className="w-9 h-9 rounded-lg bg-electric flex items-center justify-center overflow-hidden">
-    <img 
-      src="/logo.jpg" 
-      alt="Logo Henrique Arsego" 
-      className="w-full h-full object-cover" 
-    />
-  </div>
-  <span className="text-lg font-bold text-charcoal">Henrique Arsego</span>
-</a>
+          <a href="/" className="flex items-center gap-2">
+            <div className="w-9 h-9 rounded-lg bg-electric flex items-center justify-center overflow-hidden">
+              <img
+                src="/logo.jpg"
+                alt="Logo Henrique Arsego"
+                className="w-full h-full object-cover"
+              />
+            </div>
+            <span className="text-lg font-bold text-charcoal">Henrique Arsego</span>
+          </a>
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center gap-8">
@@ -82,41 +81,41 @@ const Header = () => {
       </div>
 
       {/* Mobile Menu */}
-{isMobileMenuOpen && (
-  <motion.div
-    initial={{ opacity: 0, height: 0 }}
-    animate={{ opacity: 1, height: "auto" }}
-    exit={{ opacity: 0, height: 0 }}
-    // Ajuste: overflow-hidden e w-full garantem que nada saia lateralmente
-    className="md:hidden bg-background border-t border-charcoal/5 w-full overflow-hidden"
-  >
-    {/* Ajuste: px-4 e max-w-full para travar o conteúdo no mobile */}
-    <div className="container py-6 px-4 space-y-4 max-w-full">
-      {navLinks.map((link) => (
-        <a
-          key={link.href}
-          href={link.href}
-          onClick={() => setIsMobileMenuOpen(false)}
-          className="block text-charcoal-muted hover:text-charcoal font-medium py-3 border-b border-charcoal/5"
+      {isMobileMenuOpen && (
+        <motion.div
+          initial={{ opacity: 0, height: 0 }}
+          animate={{ opacity: 1, height: "auto" }}
+          exit={{ opacity: 0, height: 0 }}
+          // Ajuste: overflow-hidden e w-full garantem que nada saia lateralmente
+          className="md:hidden bg-background border-t border-charcoal/5 w-full overflow-hidden"
         >
-          {link.label}
-        </a>
-      ))}
-      
-      {/* O culpado estava aqui: Adicionamos h-auto e whitespace-normal */}
-      <Button 
-        variant="cta" 
-        size="default" 
-        className="w-full h-auto py-4 px-6 whitespace-normal leading-tight" 
-        asChild
-      >
-        <a href={whatsappLink} target="_blank" rel="noopener noreferrer" className="text-center">
-          Diagnóstico Gratuito
-        </a>
-      </Button>
-    </div>
-  </motion.div>
-)}
+          {/* Ajuste: px-4 e max-w-full para travar o conteúdo no mobile */}
+          <div className="container py-6 px-4 space-y-4 max-w-full">
+            {navLinks.map((link) => (
+              <a
+                key={link.href}
+                href={link.href}
+                onClick={() => setIsMobileMenuOpen(false)}
+                className="block text-charcoal-muted hover:text-charcoal font-medium py-3 border-b border-charcoal/5"
+              >
+                {link.label}
+              </a>
+            ))}
+
+            {/* O culpado estava aqui: Adicionamos h-auto e whitespace-normal */}
+            <Button
+              variant="cta"
+              size="default"
+              className="w-full h-auto py-4 px-6 whitespace-normal leading-tight"
+              asChild
+            >
+              <a href={whatsappLink} target="_blank" rel="noopener noreferrer" className="text-center">
+                Diagnóstico Gratuito
+              </a>
+            </Button>
+          </div>
+        </motion.div>
+      )}
     </motion.header>
   );
 };
