@@ -64,7 +64,7 @@ const HeroSection = () => {
             className="text-lg md:text-xl text-charcoal-muted max-w-3xl mx-auto mb-10 leading-relaxed"
           >
             Consultoria especializada em{" "}
-            <span className="text-charcoal font-medium">tráfego pago</span> (Meta, Google, TikTok),{" "}
+            <span className="text-charcoal font-medium">tráfego pago e orgânico</span> (Meta, Google, TikTok),{" "}
             <span className="text-charcoal font-medium">tagueamento avançado</span> (CAPI/GTM),{" "}
             <span className="text-charcoal font-medium">dashboards em tempo real</span> e{" "}
             <span className="text-charcoal font-medium">automação de processos</span>.
