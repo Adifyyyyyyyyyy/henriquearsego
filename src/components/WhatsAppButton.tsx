@@ -18,7 +18,7 @@ const WhatsAppButton = () => {
       aria-label="Contato via WhatsApp"
     >
       <MessageCircle className="w-6 h-6" />
-      <span className="hidden sm:inline font-semibold">Fale Conosco</span>
+      <span className="hidden sm:inline font-semibold">Fale Comigo</span>
       
       {/* Pulse Animation */}
       <span className="absolute -top-1 -right-1 flex h-4 w-4">
