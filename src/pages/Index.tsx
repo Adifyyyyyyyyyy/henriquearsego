@@ -6,6 +6,7 @@ import ProcessTimeline from "@/components/ProcessTimeline";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import SpecialistSection from "@/components/SpecialistSection";
+import FunnelJourneySection from "@/components/FunnelJourneySection"
 
 const Index = () => {
   return (
@@ -16,7 +17,7 @@ const Index = () => {
         <BentoGrid />
         <SpecialistSection />
         <div id="comparativo">
-          <AntiAgencySection />
+          <FunnelJourneySection />
         </div>
         <div id="processo">
           <ProcessTimeline />
