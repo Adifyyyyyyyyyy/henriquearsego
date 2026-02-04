@@ -17,7 +17,7 @@ const Index = () => {
         <BentoGrid />
         <SpecialistSection />
         <div id="comparativo">
-          <FunnelJourneySection />
+          <AntiAgencySection />
         </div>
         <div id="processo">
           <ProcessTimeline />
