@@ -7,6 +7,7 @@ import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import SpecialistSection from "@/components/SpecialistSection";
 import FunnelJourneySection from "@/components/FunnelJourneySection"
+import EcosystemFunnel from "@/components/EcosystemFunnel"
 
 const Index = () => {
   return (
@@ -16,10 +17,9 @@ const Index = () => {
         <HeroSection />
         <BentoGrid />
         <FunnelJourneySection />
+        <EcosystemFunnel />
         <SpecialistSection />        
-        <div id="comparativo">
-          <AntiAgencySection />
-        </div>
+        
         <div id="processo">
           <ProcessTimeline />
         </div>
