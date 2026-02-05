@@ -15,7 +15,8 @@ const Index = () => {
       <main>
         <HeroSection />
         <BentoGrid />
-        <SpecialistSection />
+        <FunnelJourneySection />
+        <SpecialistSection />        
         <div id="comparativo">
           <AntiAgencySection />
         </div>
