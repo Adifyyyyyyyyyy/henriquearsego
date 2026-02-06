@@ -5,6 +5,14 @@ import { ArrowRight, BarChart3, Database, Zap } from "lucide-react";
 const HeroSection = () => {
   const whatsappLink = "https://wa.me/5551996719696?text=Olá! Gostaria de agendar um diagnóstico para minha empresa.";
 
+  // URLs das imagens dos usuários para o badge de waitlist
+  const users = [
+    "https://framerusercontent.com/images/ETgoVdeITLLIYCHTFNeVuZDMyQY.png",
+    "https://framerusercontent.com/images/bnJJiW5Vfixlrz7M2pzoeyHBU.png",
+    "https://framerusercontent.com/images/rlizSNVuxrrqd6I5hGaSxwqn0Os.png",
+    "https://framerusercontent.com/images/X0pqhTmlK8gdYqPbljhuLXlyd0I.png",
+  ];
+
   return (
     <section className="relative min-h-screen flex items-center section-gradient overflow-hidden">
       {/* Background Elements */}
@@ -29,15 +37,26 @@ const HeroSection = () => {
 
       <div className="container relative z-10 py-20 lg:py-32">
         <div className="max-w-4xl mx-auto text-center">
-          {/* Badge */}
+          
+          {/* Waitlist Badge - Integrado Aqui */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
-            className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-electric/10 text-electric text-sm font-medium mb-8"
+            className="inline-flex items-center gap-4 bg-white/5 border border-charcoal/5 px-4 py-2 rounded-full backdrop-blur-sm mb-8"
           >
-            <Zap size={16} />
-            Consultoria em Marketing Digital & Data Intelligence
+            <div className="flex -space-x-3">
+              {users.map((url, index) => (
+                <div key={index} className="w-7 h-7 rounded-full border-2 border-white overflow-hidden bg-slate-200">
+                  <img src={url} alt="user" className="w-full h-full object-cover" />
+                </div>
+              ))}
+            </div>
+            <div className="flex items-center gap-1 text-xs font-medium text-charcoal-muted">
+              <span>Junte-se a</span>
+              <span className="text-electric font-bold">+78</span>
+              <span>empresas já atendidas</span>
+            </div>
           </motion.div>
 
           {/* Main Headline */}
@@ -47,13 +66,12 @@ const HeroSection = () => {
             transition={{ duration: 0.6, delay: 0.1 }}
             className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-charcoal leading-tight tracking-tight mb-6"
           >
-            Sua operação de marketing{" "}
+            Consultoria de {" "}
             <span className="relative">
-              <span className="relative z-10">não precisa de mais tráfego</span>
+              <span className="relative z-10">Marketing Digital </span>
               <span className="absolute bottom-2 left-0 right-0 h-3 bg-electric/20 -z-0" />
             </span>
-            ,{" "}
-            <span className="text-electric">precisa de mais dados.</span>
+            <span className="text-electric">& Data Intelligence</span>
           </motion.h1>
 
           {/* Subheadline */}
@@ -63,11 +81,10 @@ const HeroSection = () => {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="text-lg md:text-xl text-charcoal-muted max-w-3xl mx-auto mb-10 leading-relaxed"
           >
-            Consultoria especializada em{" "}
-            <span className="text-charcoal font-medium">tráfego pago e orgânico</span> (Meta, Google, TikTok),{" "}
-            <span className="text-charcoal font-medium">tagueamento avançado</span> (CAPI/GTM),{" "}
-            <span className="text-charcoal font-medium">dashboards em tempo real</span> e{" "}
-            <span className="text-charcoal font-medium">automação de processos</span>.
+            Monitore <span className="text-charcoal font-medium">toda jornada </span> 
+            do cliente <span className="text-charcoal font-medium"> e ajuste</span> os esforços{" "}
+            <span className="text-charcoal font-medium">de marketing</span> para aumentar a taxa de conversão
+            em cada etapa.
           </motion.p>
 
           {/* CTA Buttons */}
@@ -78,27 +95,25 @@ const HeroSection = () => {
             className="flex flex-col sm:flex-row items-center justify-center gap-4"
           >
             <Button 
-    variant="cta" 
-    size="xl" 
-    asChild
-    className="group h-auto min-h-[64px] py-4 px-6 whitespace-normal w-full sm:w-auto max-w-[400px]"
-  >
-    <a 
-      href={whatsappLink} 
-      target="_blank" 
-      rel="noopener noreferrer"
-      className="flex items-center justify-center gap-3 text-center"
-    >
-      <span className="flex-1 leading-tight">
-        Agendar Diagnóstico Gratuito
-      </span>
-      <ArrowRight className="shrink-0 transition-transform group-hover:translate-x-1" />
-    </a>
-  </Button>
-            <Button variant="outline" size="lg" asChild>
-              <a href="#diferenciais">
-                Ver Diferenciais
+              variant="cta" 
+              size="xl" 
+              asChild
+              className="group h-auto min-h-[64px] py-4 px-6 whitespace-normal w-full sm:w-auto max-w-[400px]"
+            >
+              <a 
+                href={whatsappLink} 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="flex items-center justify-center gap-3 text-center"
+              >
+                <span className="flex-1 leading-tight">
+                  Agendar Diagnóstico Gratuito
+                </span>
+                <ArrowRight className="shrink-0 transition-transform group-hover:translate-x-1" />
               </a>
+            </Button>
+            <Button variant="outline" size="lg" asChild>
+              <a href="#Calculadora">Calculadora de conversão</a>
             </Button>
           </motion.div>
 

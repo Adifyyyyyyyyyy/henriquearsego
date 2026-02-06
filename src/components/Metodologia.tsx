@@ -17,8 +17,8 @@ const steps = [
   },
   {
     icon: Rocket,
-    title: "Escala de Tráfego",
-    description: "Início das campanhas de tráfego pago com base em dados precisos e estratégias de escala.",
+    title: "Geração de Demanda",
+    description: "Início das otimizações de SEO e tráfego pago com base em dados precisos e estratégias de escala.",
     duration: "Semana 4+",
   },
   {
@@ -33,7 +33,7 @@ const ProcessTimeline = () => {
   const whatsappLink = "https://wa.me/5551996719696?text=Olá! Gostaria de agendar um diagnóstico para minha empresa.";
 
   return (
-    <section className="py-24 lg:py-32 bg-surface-subtle">
+    <section id="metodologia" className="py-24 lg:py-32 bg-surface-subtle">
       <div className="container">
         {/* Section Header */}
         <motion.div
@@ -111,7 +111,7 @@ const ProcessTimeline = () => {
   className="text-center mt-16 px-4" // Adicionado padding lateral para telas pequenas
 >
   <p className="text-charcoal-muted mb-6">
-    Pronto para começar sua transformação de dados?
+    Pronto para começar sua transformação digital?
   </p>
   <Button 
     variant="cta" 

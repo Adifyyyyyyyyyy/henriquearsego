@@ -5,8 +5,8 @@ import { Button } from "@/components/ui/button";
 
 const navLinks = [
   { label: "Diferenciais", href: "#diferenciais" },
-  { label: "Comparativo", href: "#comparativo" },
-  { label: "Processo", href: "#processo" },
+  { label: "Monitoramento", href: "#monitoramento" },  
+  { label: "Metodologia", href: "#metodologia" },
   { label: "Blog", href: "https://blog.henriquearsego.com.br" },
 ];
 

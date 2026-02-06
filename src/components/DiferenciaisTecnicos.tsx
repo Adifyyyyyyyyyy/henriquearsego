@@ -31,8 +31,8 @@ const features = [
   },
   {
     icon: TrendingUp,
-    title: "Gestão de Tráfego",
-    description: "Estratégias de escala para negócios que buscam lucro, não apenas alcance. Foco em conversões reais e custo por aquisição.",
+    title: "Geração de Demanda",
+    description: "Estratégias de tráfego para negócios que buscam lucro, não apenas alcance. Foco em métricas de performance e aquisição.",
     gradient: "from-orange-500/10 to-amber-500/10",
     iconBg: "bg-orange-500/10",
     iconColor: "text-orange-600",
@@ -147,7 +147,7 @@ const BentoGrid = () => {
           {[
             { value: "98%", label: "Taxa de Precisão no tracking" },
             { value: "40%", label: "Redução de Custo por Oportunidade" },
-            { value: "2x", label: "Velocidade de Dados" },
+            { value: "2x", label: "Velocidade com Automação" },
             { value: "24/7", label: "Monitoramento" },
           ].map((stat) => (
             <div key={stat.label} className="text-center">

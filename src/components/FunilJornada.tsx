@@ -7,7 +7,7 @@ const stages = [
     stage: "Topo do Funil",
     label: "Consciência",
     title: "Atração Qualificada (Tráfego & SEO)",
-    description: "Onde tudo começa. Utilizo Campanhas de Tráfego Pago (Meta/Google Ads) e otimização de SEO para colocar sua marca na frente de quem realmente busca sua solução. O objetivo aqui é gerar volume de qualidade, atraindo os olhos certos para o seu negócio.",
+    description: "Onde tudo começa. Campanhas de Tráfego Pago (Meta/Google Ads) e otimização de SEO para colocar sua marca na frente de quem realmente busca sua solução. O objetivo aqui é gerar tráfego qualificado, atraindo os olhos certos para o seu negócio.",
     color: "hsl(217 91% 65%)",
   },
   {
