@@ -96,7 +96,7 @@ const ConversionCalculator = () => {
             Auditoria de <span className="text-electric">Performance Real</span>
           </h2>
           <p className="text-charcoal-muted text-lg max-w-2xl mx-auto leading-relaxed">
-            Mapeie cada etapa da sua jornada e descubra exatamente onde sua operação está perdendo dinheiro.
+            Mapeie sua eficiência operacional e descubra exatamente o que impede sua operação de marketing de escalar com lucratividade.
           </p>
         </div>
 
