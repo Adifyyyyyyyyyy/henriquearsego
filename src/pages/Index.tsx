@@ -1,5 +1,5 @@
-import Header from "@/components/Header";
-import HeroSection from "@/components/HeroSection";
+import Header from "@/components/0Header";
+import HeroSection from "@/components/1HeroSection";
 import BentoGrid from "@/components/DiferenciaisTecnicos";
 import ProcessTimeline from "@/components/Metodologia";
 import Footer from "@/components/Footer";
@@ -9,6 +9,9 @@ import FunnelJourneySection from "@/components/FunilJornada"
 import EcosystemFunnel from "@/components/FluxoMidias"
 import ConversionCalculator from "@/components/CalculadoraConversao"
 import TestimonialsSection from "@/components/TestimonialsSection"
+import ContactFormSection from "@/components/ContactFormSection"
+
+
 
 
 const Index = () => {
@@ -22,8 +25,8 @@ const Index = () => {
         <EcosystemFunnel />
         <SpecialistSection />        
         <ProcessTimeline />
-        <ConversionCalculator />
         <TestimonialsSection />
+        <ContactFormSection />
       </main>
       <Footer />
       <WhatsAppButton />

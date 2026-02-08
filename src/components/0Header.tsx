@@ -63,8 +63,8 @@ const Header = () => {
           {/* CTA Button */}
           <div className="hidden md:block">
             <Button variant="cta" size="default" asChild>
-              <a href={whatsappLink} target="_blank" rel="noopener noreferrer">
-                Diagnóstico Gratuito
+              <a href="#contactForm">
+                Agendar Diagnóstico
               </a>
             </Button>
           </div>
