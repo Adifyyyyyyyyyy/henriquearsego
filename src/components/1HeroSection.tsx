@@ -48,7 +48,7 @@ const HeroSection = () => {
     <span className="relative z-10">Marketing Digital</span>
     <span className="absolute bottom-2 left-0 right-0 h-3 bg-electric/20 -z-0" />
   </span>
-  <span className="block text-electric mt-2 sm:mt-1 text-3xl sm:text-4xl lg:text-5xl font-semibold">
+  <span className="block text-electric mt-2 sm:mt-1 text-3xl sm:text-4xl lg:text-4xl font-semibold">
     Orientada por Dados para Destravar Resultados
   </span>
 </h1>
@@ -57,7 +57,7 @@ const HeroSection = () => {
 
           {/* Subheadline */}
           <p className="text-base sm:text-lg md:text-xl text-charcoal-muted max-w-3xl mb-10 sm:mb-12 leading-relaxed">
-            <span className="text-charcoal font-medium">Analisamos</span> toda a
+            <span className="text-charcoal font-medium">Analiso</span> toda a
             jornada, canais e métricas do seu marketing para mostrar exatamente{" "}
             <span className="text-charcoal font-medium">
               o que funciona, o que está travando o crescimento e onde investir
