@@ -123,7 +123,7 @@ const BentoGrid = () => {
 
                 {/* Hover Arrow */}
                 <div className="mt-4 flex items-center gap-2 text-electric opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-x-[-10px] group-hover:translate-x-0">
-                  <span className="text-sm font-medium">Saiba mais</span>
+                  <a href="#contactForm"><span className="text-sm font-medium">Saiba mais</span></a>
                   <Zap size={14} />
                 </div>
               </div>
