@@ -82,7 +82,7 @@ const BentoGrid = () => {
             <span className="text-electric">que funciona</span>
           </h2>
           <p className="text-lg text-charcoal-muted max-w-2xl mx-auto">
-            Soluções técnicas que vão além de relatórios bonitos. Implementamos a infraestrutura completa para escalar seus resultados.
+            Soluções técnicas que vão além de relatórios bonitos. Implemento a infraestrutura completa para escalar seus resultados.
           </p>
         </motion.div>
 

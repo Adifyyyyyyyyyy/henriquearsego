@@ -4,7 +4,7 @@ import BentoGrid from "@/components/2DiferenciaisTecnicos";
 import ProcessTimeline from "@/components/4Metodologia";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
-import SpecialistSection from "@/components/HenriqueArsego";
+import SpecialistSection from "@/components/5HenriqueArsego";
 import FunnelJourneySection from "@/components/3FunilJornada"
 import EcosystemFunnel from "@/components/FluxoMidias"
 import ConversionCalculator from "@/components/CalculadoraConversao"
