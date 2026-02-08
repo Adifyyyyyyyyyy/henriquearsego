@@ -1,6 +1,6 @@
 import Header from "@/components/0Header";
 import HeroSection from "@/components/1HeroSection";
-import BentoGrid from "@/components/DiferenciaisTecnicos";
+import BentoGrid from "@/components/2DiferenciaisTecnicos";
 import ProcessTimeline from "@/components/Metodologia";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";

@@ -5,7 +5,7 @@ const features = [
   {
     icon: Crosshair,
     title: "Rastreamento com Precisão",
-    description: "Implementação de API de Conversões (CAPI) para contornar perdas das UTMs e garantir dados precisos para suas campanhas.",
+    description: "Implementação do GTM server-side, GA4, Pixel e API de Conversões (CAPI) para contornar perdas das UTMs e garantir dados precisos para suas campanhas.",
     gradient: "from-blue-500/10 to-cyan-500/10",
     iconBg: "bg-blue-500/10",
     iconColor: "text-blue-600",
@@ -32,7 +32,7 @@ const features = [
   {
     icon: TrendingUp,
     title: "Geração de Demanda",
-    description: "Estratégias de tráfego para negócios que buscam lucro, não apenas alcance. Foco em métricas de performance e aquisição.",
+    description: "Estratégias de tráfego para negócios que buscam clientes, não apenas interessados. Foco em métricas de performance e aquisição.",
     gradient: "from-orange-500/10 to-amber-500/10",
     iconBg: "bg-orange-500/10",
     iconColor: "text-orange-600",
