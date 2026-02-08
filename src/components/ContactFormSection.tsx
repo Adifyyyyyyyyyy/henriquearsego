@@ -34,7 +34,7 @@ const ContactFormSection = () => {
             viewport={{ once: true }}
             className="text-lg text-charcoal-muted max-w-2xl mx-auto"
           >
-            Entenda exatamente o que está travando seus resultados e onde focar para crescer com dados, não achismos.
+            Entenda exatamente o que está travando seus resultados e onde focar para crescer de forma organizada.
           </motion.p>
         </div>
 

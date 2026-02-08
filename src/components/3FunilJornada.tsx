@@ -7,15 +7,15 @@ const stages = [
     stage: "Topo do Funil",
     label: "Consciência",
     title: "Atração Qualificada (Tráfego & SEO)",
-    description: "Onde tudo começa. Campanhas de Tráfego Pago (Meta/Google Ads) e otimização de SEO para colocar sua marca na frente de quem realmente busca sua solução. O objetivo aqui é gerar tráfego qualificado, atraindo os olhos certos para o seu negócio.",
+    description: "Identifico se você está atraindo demanda real ou apenas tráfego caro sem intenção de compra — e ajustamos isso antes de escalar.",
     color: "hsl(217 91% 65%)",
   },
   {
     icon: Map,
     stage: "Meio do Funil",
     label: "Consideração",
-    title: "Conversão de Alta Performance (Landing Pages)",
-    description: "Transformamos visitantes em leads. Através de Landing Pages otimizadas para conversão e copy persuasivo, capturamos o contato do seu potencial cliente. É o momento de filtrar os curiosos e identificar quem está pronto para avançar.",
+    title: "Conversão de Alta Performance (Ads e Landing Pages)",
+    description: "Analiso por que seus visitantes não viram oportunidades reais, mesmo com tráfego ativo — e mostramos o que precisa mudar para aumentar conversão sem gastar mais.",
     color: "hsl(217 91% 55%)",
   },
   {
@@ -23,7 +23,7 @@ const stages = [
     stage: "Fundo do Funil",
     label: "Decisão",
     title: "Fechamento e Inteligência (CRM & Vendas)",
-    description: "Onde o lucro acontece. Integramos todos os dados ao seu CRM, permitindo que sua equipe de vendas atue no momento exato. Com automação e rastreamento, garantimos que nenhum lead se perca e que cada investimento em campanha seja mensurável.",
+    description: "Organizo seus dados para que você saiba exatamente quanto cada canal custa, retorna e escala — sem depender de achismos ou relatórios confusos.",
     color: "hsl(217 91% 45%)",
   },
 ];
@@ -41,11 +41,9 @@ const FunnelJourneySection = () => {
           className="text-center mb-20"
         >
           <h2 className="text-3xl md:text-5xl font-bold mb-6 text-charcoal">
-            Estrutura Automática de <span className="text-electric">Atração e Conversão</span>
+            Como identificamos onde seu <span className="text-electric">marketing está travado</span>
           </h2>
-          <p className="text-lg text-charcoal-muted max-w-2xl mx-auto">
-            Entenda como transformo desconhecidos em clientes fiéis através de um ecossistema de dados e tecnologia.
-          </p>
+          
         </motion.div>
 
         <div className="grid lg:grid-cols-2 gap-16 items-center">

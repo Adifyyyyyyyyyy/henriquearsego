@@ -76,7 +76,7 @@ const HeroSection = () => {
                 href="#contactForm"
                 className="flex items-center justify-center gap-3"
               >
-                <span>Agendar Diagnóstico</span>
+                <span>Solicitar Diagnóstico</span>
                 <ArrowRight className="transition-transform group-hover:translate-x-1" />
               </a>
             </Button>

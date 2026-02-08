@@ -64,7 +64,7 @@ const Header = () => {
           <div className="hidden md:block">
             <Button variant="cta" size="default" asChild>
               <a href="#contactForm">
-                Agendar Diagnóstico
+                Solicitar Diagnóstico
               </a>
             </Button>
           </div>

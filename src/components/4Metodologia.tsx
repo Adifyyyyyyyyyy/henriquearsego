@@ -120,12 +120,10 @@ const ProcessTimeline = () => {
     className="group h-auto py-4 px-8 whitespace-normal max-w-full"
   >
     <a 
-      href={whatsappLink} 
-      target="_blank" 
-      rel="noopener noreferrer" 
+      href="#contactForm"
       className="flex items-center justify-center gap-2 text-center"
     >
-      <span className="flex-1">Agendar Diagnóstico Gratuito</span>
+      <span className="flex-1">Solicitar Diagnóstico</span>
       <ArrowRight className="shrink-0 transition-transform group-hover:translate-x-1" />
     </a>
   </Button>
