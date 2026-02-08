@@ -1,9 +1,7 @@
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react-swc";
 import path from "path";
-import { componentTagger } from "lovable-tagger";
 
-// https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react()],
   resolve: {
@@ -11,4 +9,13 @@ export default defineConfig({
       "@": path.resolve(__dirname, "./src"),
     },
   },
+  // Adicione este bloco abaixo:
+  server: {
+    host: "0.0.0.0",
+    port: 80,
+  },
+  preview: {
+    host: "0.0.0.0",
+    port: 80,
+  }
 });
