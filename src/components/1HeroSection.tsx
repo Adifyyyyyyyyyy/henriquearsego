@@ -9,7 +9,7 @@ const HeroSection = () => {
   const users = [
     "https://framerusercontent.com/images/ETgoVdeITLLIYCHTFNeVuZDMyQY.png",
     "https://framerusercontent.com/images/bnJJiW5Vfixlrz7M2pzoeyHBU.png",
-    "https://framerusercontent.com/images/rlizSNVuxrrqd6I5hGaSxwqn0I.png",
+    "https://lh3.googleusercontent.com/a-/ALV-UjXKiUl2qV9y_x95yE2NHMoFFYE296pL07-EPKWXhFnpfS_ncBUXmA=s36-c-rp-mo-br100",
     "https://framerusercontent.com/images/X0pqhTmlK8gdYqPbljhuLXlyd0I.png",
   ];
 
