@@ -147,7 +147,7 @@ const ProcessTimeline = () => {
             className="group bg-electric hover:bg-electric-dark text-white px-10 py-7 text-lg rounded-full transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-electric/20"
           >
             <a href="#contactForm" className="flex items-center gap-3">
-              Solicitar Diagnóstico Gratuito
+              Agendar Consultoria
               <ArrowRight className="group-hover:translate-x-2 transition-transform" />
             </a>
           </Button>
