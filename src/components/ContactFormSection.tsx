@@ -1,10 +1,41 @@
+import { useState } from "react";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Loader2, CheckCircle2 } from "lucide-react";
 
 const ContactFormSection = () => {
+  const [status, setStatus] = useState<"idle" | "loading" | "success">("idle");
+
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setStatus("loading");
+
+    const formData = new FormData(e.currentTarget);
+    
+    // Lógica para disparar ao GTM Web
+    // @ts-ignore
+    window.dataLayer = window.dataLayer || [];
+    // @ts-ignore
+    window.dataLayer.push({
+      event: "lead_form_submit",
+      user_data: {
+        nome: formData.get("nome"),
+        empresa: formData.get("empresa"),
+        email: formData.get("email"),
+      },
+      form_data: {
+        desafio: formData.get("desafio"),
+      },
+    });
+
+    // Feedback visual de sucesso após o push
+    setTimeout(() => {
+      setStatus("success");
+    }, 800);
+  };
+
   return (
     <section id="contactForm" className="relative py-24 section-gradient overflow-hidden">
       {/* Background blur */}
@@ -46,67 +77,92 @@ const ContactFormSection = () => {
           viewport={{ once: true }}
           className="max-w-2xl mx-auto bg-white/70 backdrop-blur-md border border-charcoal/10 rounded-2xl p-8 md:p-10 shadow-lg"
         >
-          <form className="space-y-6">
-            {/* Nome */}
-            <div>
-              <label className="block text-sm font-medium text-charcoal mb-1">
-                Seu nome
-              </label>
-              <Input
-                placeholder="Ex: Henrique Arsego"
-                className="h-12"
-              />
+          {status === "success" ? (
+            <div className="text-center py-10 space-y-4">
+              <CheckCircle2 className="w-16 h-16 text-green-500 mx-auto" />
+              <h3 className="text-2xl font-bold text-charcoal">Solicitação enviada!</h3>
+              <p className="text-charcoal-muted">Obrigado pelo contato. Retornarei em breve.</p>
+              <Button variant="outline" onClick={() => setStatus("idle")}>Voltar</Button>
             </div>
+          ) : (
+            <form onSubmit={handleSubmit} className="space-y-6">
+              {/* Nome */}
+              <div>
+                <label className="block text-sm font-medium text-charcoal mb-1">
+                  Seu nome
+                </label>
+                <Input
+                  name="nome"
+                  required
+                  placeholder="Ex: Henrique Arsego"
+                  className="h-12"
+                />
+              </div>
 
-            {/* Empresa */}
-            <div>
-              <label className="block text-sm font-medium text-charcoal mb-1">
-                Empresa
-              </label>
-              <Input
-                placeholder="Nome da empresa"
-                className="h-12"
-              />
-            </div>
+              {/* Empresa */}
+              <div>
+                <label className="block text-sm font-medium text-charcoal mb-1">
+                  Empresa
+                </label>
+                <Input
+                  name="empresa"
+                  required
+                  placeholder="Nome da empresa"
+                  className="h-12"
+                />
+              </div>
 
-            {/* Email */}
-            <div>
-              <label className="block text-sm font-medium text-charcoal mb-1">
-                Email corporativo
-              </label>
-              <Input
-                type="email"
-                placeholder="voce@empresa.com"
-                className="h-12"
-              />
-            </div>
+              {/* Email */}
+              <div>
+                <label className="block text-sm font-medium text-charcoal mb-1">
+                  Email corporativo
+                </label>
+                <Input
+                  name="email"
+                  type="email"
+                  required
+                  placeholder="voce@empresa.com"
+                  className="h-12"
+                />
+              </div>
 
-            {/* Desafio */}
-            <div>
-              <label className="block text-sm font-medium text-charcoal mb-1">
-                Qual é o principal desafio do seu marketing hoje?
-              </label>
-              <Textarea
-                placeholder="Ex: Investimos em anúncios, mas não sabemos quais canais realmente geram resultado..."
-                className="min-h-[120px]"
-              />
-            </div>
+              {/* Desafio */}
+              <div>
+                <label className="block text-sm font-medium text-charcoal mb-1">
+                  Qual é o principal desafio do seu marketing hoje?
+                </label>
+                <Textarea
+                  name="desafio"
+                  required
+                  placeholder="Ex: Investimos em anúncios, mas não sabemos quais canais realmente geram resultado..."
+                  className="min-h-[120px]"
+                />
+              </div>
 
-            {/* CTA */}
-            <Button
-              variant="cta"
-              size="xl"
-              className="group w-full h-auto min-h-[64px] flex items-center justify-center gap-3"
-            >
-              <span>Solicitar diagnóstico</span>
-              <ArrowRight className="transition-transform group-hover:translate-x-1" />
-            </Button>
+              {/* CTA */}
+              <Button
+                type="submit"
+                variant="cta"
+                size="xl"
+                disabled={status === "loading"}
+                className="group w-full h-auto min-h-[64px] flex items-center justify-center gap-3"
+              >
+                {status === "loading" ? (
+                  <Loader2 className="animate-spin" />
+                ) : (
+                  <>
+                    <span>Solicitar diagnóstico</span>
+                    <ArrowRight className="transition-transform group-hover:translate-x-1" />
+                  </>
+                )}
+              </Button>
 
-            {/* Micro confiança */}
-            <p className="text-xs text-charcoal-muted text-center mt-2">
-              Diagnóstico gratuito • Sem compromisso • Resposta em até 1 dia útil
-            </p>
-          </form>
+              {/* Micro confiança */}
+              <p className="text-xs text-charcoal-muted text-center mt-2">
+                Diagnóstico gratuito • Sem compromisso • Resposta em até 1 dia útil
+              </p>
+            </form>
+          )}
         </motion.div>
       </div>
     </section>

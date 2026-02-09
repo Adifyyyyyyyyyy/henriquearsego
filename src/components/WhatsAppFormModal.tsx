@@ -9,6 +9,20 @@ const WhatsAppFormModal = ({ onClose }: { onClose: () => void }) => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
 
+    // 1. Disparo para o Data Layer (GTM Web)
+    // @ts-ignore
+    window.dataLayer = window.dataLayer || [];
+    // @ts-ignore
+    window.dataLayer.push({
+      event: "whatsapp_lead_submit", // Evento diferente para distinguir do formulário fixo
+      user_data: {
+        nome: name,
+        email: email,
+      },
+      form_location: "whatsapp_modal"
+    });
+
+    // 2. Lógica do WhatsApp
     const message = encodeURIComponent(
       `Olá! Meu nome é ${name} (${email}) e gostaria de agendar um diagnóstico gratuito.`
     );
