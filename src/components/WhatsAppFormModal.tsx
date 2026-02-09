@@ -24,7 +24,7 @@ const WhatsAppFormModal = ({ onClose }: { onClose: () => void }) => {
 
     // 2. Lógica do WhatsApp
     const message = encodeURIComponent(
-      `Olá! Meu nome é ${name} (${email}) e gostaria de agendar um diagnóstico gratuito.`
+      `Olá! Meu nome é ${name} (${email}) e gostaria de solicitar um diagnóstico de marketing.`
     );
 
     window.open(
