@@ -59,7 +59,7 @@ const HeroSection = () => {
               className="text-gradient-aurora italic inline-block"
               style={{ paddingRight: "0.15em", marginRight: "-0.15em" }}
             >
-              infraestrutura de dado
+              infraestrutura de dados
             </span>{" "}
             por trás — não só criativo bom e palpite.
           </motion.h1>

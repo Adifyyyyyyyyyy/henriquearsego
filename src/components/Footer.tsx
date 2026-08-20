@@ -25,7 +25,7 @@ const Footer = () => {
             </div>
             <p className="text-muted-foreground leading-relaxed">
               Consultor de Marketing Digital. Tráfego pago com infraestrutura
-              de dado — não só criativo bom e palpite.
+              de dados — não só criativo bom e palpite.
             </p>
           </motion.div>
 
