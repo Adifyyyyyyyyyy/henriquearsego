@@ -1,7 +1,12 @@
 import { motion } from "framer-motion";
-import { Cpu, Building2, HeartPulse, Dumbbell, Factory } from "lucide-react";
+import { Cpu, Building2, HeartPulse, Dumbbell, Factory, ShoppingCart } from "lucide-react";
 
 const verticals = [
+  {
+    category: "E-commerce",
+    icon: ShoppingCart,
+    description: "Funil de compra otimizado do clique ao checkout, com ROAS e ticket médio como métrica que importa — não sessão.",
+  },
   {
     category: "Tecnologia & Fintech",
     icon: Cpu,
@@ -52,7 +57,7 @@ const Verticals = () => {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
           {verticals.map((v, i) => (
             <motion.div
               key={v.category}
