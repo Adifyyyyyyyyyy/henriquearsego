@@ -67,8 +67,7 @@ const HeroSection = () => {
           >
             Gerencio campanhas em Meta, Google, TikTok e YouTube com
             rastreamento server-side (GTM, GA4, CAPI), dashboards de BI e
-            automação via n8n — pra você decidir com dado real, não com CPL
-            de aba anônima.
+            automação via n8n — pra você decidir com dado real.
           </motion.p>
 
           <motion.div
