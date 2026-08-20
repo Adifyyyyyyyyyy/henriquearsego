@@ -8,7 +8,7 @@ import { motion } from "framer-motion";
 const cases = [
   { image: "/cases/ecommerce-01.png", niche: "E-commerce" },
   { image: "/cases/ecommerce-02.png", niche: "E-commerce" },
-  { image: "/placeholder.svg", niche: "Imobiliário & Incorporação" },
+  { image: "/cases/imobiliario-01.png", niche: "Imobiliário & Incorporação" },
   { image: "/placeholder.svg", niche: "Saúde & Bem-Estar" },
   { image: "/placeholder.svg", niche: "Tecnologia & Fintech" },
 ];
