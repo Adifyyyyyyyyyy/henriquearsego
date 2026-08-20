@@ -11,7 +11,7 @@ const cases = [
   { image: "/cases/ecommerce-03.png", niche: "E-commerce" },
   { image: "/cases/imobiliario-01.png", niche: "Imobiliário & Incorporação" },
   { image: "/cases/saude-01.png", niche: "Saúde & Bem-Estar" },
-  { image: "/placeholder.svg", niche: "Tecnologia & Fintech" },
+  { image: "/cases/saas-01.png", niche: "Tecnologia & Fintech" },
 ];
 
 const Cases = () => {
