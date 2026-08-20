@@ -9,7 +9,7 @@ const cases = [
   { image: "/cases/ecommerce-01.png", niche: "E-commerce" },
   { image: "/cases/ecommerce-02.png", niche: "E-commerce" },
   { image: "/cases/imobiliario-01.png", niche: "Imobiliário & Incorporação" },
-  { image: "/placeholder.svg", niche: "Saúde & Bem-Estar" },
+  { image: "/cases/saude-01.png", niche: "Saúde & Bem-Estar" },
   { image: "/placeholder.svg", niche: "Tecnologia & Fintech" },
 ];
 
