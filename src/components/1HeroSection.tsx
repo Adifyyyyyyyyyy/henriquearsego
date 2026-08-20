@@ -45,7 +45,7 @@ const HeroSection = () => {
             className="font-mono text-xs sm:text-sm text-accent tracking-[0.2em] uppercase mb-8 inline-flex items-center gap-2 border border-accent/25 bg-accent/5 rounded-full px-4 py-1.5"
           >
             <span className="w-1.5 h-1.5 rounded-full bg-accent animate-pulse" />
-            Analista Sênior de Mídia Paga · Chapecó, SC
+            Consultor de Marketing Digital · Chapecó, SC
           </motion.span>
 
           <motion.h1

@@ -24,7 +24,7 @@ const Footer = () => {
               <span className="font-display text-xl font-semibold">Henrique Arsego</span>
             </div>
             <p className="text-muted-foreground leading-relaxed">
-              Analista Sênior de Mídia Paga. Tráfego pago com infraestrutura
+              Consultor de Marketing Digital. Tráfego pago com infraestrutura
               de dado — não só criativo bom e palpite.
             </p>
           </motion.div>
