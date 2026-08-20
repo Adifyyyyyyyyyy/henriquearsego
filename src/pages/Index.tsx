@@ -1,6 +1,5 @@
 import Header from "@/components/0Header";
 import HeroSection from "@/components/1HeroSection";
-import ClientMarquee from "@/components/ClientMarquee";
 import SpecialistSection from "@/components/5HenriqueArsego";
 import BentoGrid from "@/components/2DiferenciaisTecnicos";
 import Verticals from "@/components/Verticals";
@@ -18,7 +17,6 @@ const Index = () => {
       <Header />
       <main>
         <HeroSection />
-        <ClientMarquee />
         <SpecialistSection />
         <BentoGrid />
         <Verticals />

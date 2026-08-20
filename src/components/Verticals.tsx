@@ -1,25 +1,31 @@
 import { motion } from "framer-motion";
+import { Cpu, Building2, HeartPulse, Dumbbell, Factory } from "lucide-react";
 
 const verticals = [
   {
     category: "Tecnologia & Fintech",
-    brands: ["iFood", "Conta Simples", "ZapSign", "AmigoTech", "TapTap Send"],
+    icon: Cpu,
+    description: "Growth em produto digital e fintech — aquisição pagando por ativação, não só clique.",
   },
   {
     category: "Imobiliário & Incorporação",
-    brands: ["CFL Empreendimentos", "Nortis Incorporadora", "Vibra Residencial", "The Florida Lounge"],
+    icon: Building2,
+    description: "Lead qualificado pra incorporadora e agência, do lançamento ao repasse.",
   },
   {
     category: "Saúde & Bem-Estar",
-    brands: ["OncoClínicas", "Exmed", "Pure Pilates"],
+    icon: HeartPulse,
+    description: "Aquisição de paciente e aluno em setor regulado, com compliance de anúncio em saúde.",
   },
   {
     category: "Fitness & Educação",
-    brands: ["Selfit", "Biofisic", "Unisapiens", "Uninorte", "Faculdade Líbano"],
+    icon: Dumbbell,
+    description: "Captação de matrícula e aluno recorrente, com funil pensado pro ticket de mensalidade.",
   },
   {
     category: "Entretenimento & Indústria",
-    brands: ["Warner Bros.", "Dr. Lava Tudo", "Midea", "Carapreta", "Raízen"],
+    icon: Factory,
+    description: "De B2C de massa a B2B industrial — mídia com objetivo de negócio, não vaidade de alcance.",
   },
 ];
 
@@ -46,7 +52,7 @@ const Verticals = () => {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4">
           {verticals.map((v, i) => (
             <motion.div
               key={v.category}
@@ -56,19 +62,15 @@ const Verticals = () => {
               transition={{ duration: 0.5, delay: i * 0.08 }}
               className="rounded-2xl border border-white/8 bg-white/[0.02] p-6 hover:border-accent/25 transition-colors duration-300"
             >
-              <h3 className="font-mono text-[11px] uppercase tracking-widest text-accent mb-4">
+              <div className="inline-flex items-center justify-center w-10 h-10 rounded-xl bg-accent/10 border border-accent/20 mb-5">
+                <v.icon className="w-5 h-5 text-accent" />
+              </div>
+              <h3 className="font-display text-base font-semibold text-foreground mb-2">
                 {v.category}
               </h3>
-              <ul className="space-y-2">
-                {v.brands.map((b) => (
-                  <li
-                    key={b}
-                    className="text-foreground/90 font-display text-sm sm:text-base"
-                  >
-                    {b}
-                  </li>
-                ))}
-              </ul>
+              <p className="text-sm text-muted-foreground leading-relaxed">
+                {v.description}
+              </p>
             </motion.div>
           ))}
         </div>
