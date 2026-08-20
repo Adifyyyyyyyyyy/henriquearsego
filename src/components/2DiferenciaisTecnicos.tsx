@@ -42,6 +42,9 @@ const itemVariants = {
   visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
 };
 
+const whatsappLink =
+  "https://wa.me/5551996719696?text=Olá! Gostaria de agendar um diagnóstico para minha empresa.";
+
 const BentoGrid = () => {
   return (
     <section id="diferenciais" className="py-24 lg:py-32 bg-background relative">
@@ -95,7 +98,7 @@ const BentoGrid = () => {
                   {feature.description}
                 </p>
                 <div className="mt-5 flex items-center gap-2 text-accent opacity-0 group-hover:opacity-100 transition-all duration-300 translate-x-[-8px] group-hover:translate-x-0">
-                  <a href="#contactForm">
+                  <a href={whatsappLink} target="_blank" rel="noopener noreferrer">
                     <span className="text-sm font-medium">Saiba mais</span>
                   </a>
                   <Zap size={14} />

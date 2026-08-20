@@ -34,6 +34,9 @@ const steps = [
   },
 ];
 
+const whatsappLink =
+  "https://wa.me/5551996719696?text=Olá! Gostaria de agendar um diagnóstico para minha empresa.";
+
 const ProcessTimeline = () => {
   const containerRef = useRef(null);
 
@@ -137,7 +140,7 @@ const ProcessTimeline = () => {
             Pronto pra ver onde sua mídia está travando?
           </p>
           <Button variant="cta" size="xl" asChild className="group">
-            <a href="#contactForm" className="flex items-center gap-3">
+            <a href={whatsappLink} target="_blank" rel="noopener noreferrer" className="flex items-center gap-3">
               Agendar Consultoria
               <ArrowRight className="group-hover:translate-x-1 transition-transform" />
             </a>
