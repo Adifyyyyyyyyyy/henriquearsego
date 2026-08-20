@@ -55,7 +55,12 @@ const HeroSection = () => {
             className="font-display text-4xl sm:text-6xl lg:text-7xl font-semibold text-foreground leading-[1.05] tracking-tight mb-8"
           >
             Tráfego pago com{" "}
-            <span className="text-gradient-aurora italic">infraestrutura de dado</span>{" "}
+            <span
+              className="text-gradient-aurora italic inline-block"
+              style={{ paddingRight: "0.15em", marginRight: "-0.15em" }}
+            >
+              infraestrutura de dado
+            </span>{" "}
             por trás — não só criativo bom e palpite.
           </motion.h1>
 
