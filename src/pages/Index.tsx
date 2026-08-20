@@ -7,6 +7,7 @@ import ProcessTimeline from "@/components/4Metodologia";
 import EcosystemFunnel from "@/components/FluxoMidias";
 import ConversionCalculator from "@/components/CalculadoraConversao";
 import TestimonialsSection from "@/components/TestimonialsSection";
+import Cases from "@/components/Cases";
 import ContactFormSection from "@/components/ContactFormSection";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
@@ -24,6 +25,7 @@ const Index = () => {
         <EcosystemFunnel />
         <ConversionCalculator />
         <TestimonialsSection />
+        <Cases />
         <ContactFormSection />
       </main>
       <Footer />
