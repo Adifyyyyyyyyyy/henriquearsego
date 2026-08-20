@@ -1,30 +1,30 @@
 import Header from "@/components/0Header";
 import HeroSection from "@/components/1HeroSection";
+import ClientMarquee from "@/components/ClientMarquee";
+import SpecialistSection from "@/components/5HenriqueArsego";
 import BentoGrid from "@/components/2DiferenciaisTecnicos";
+import Verticals from "@/components/Verticals";
 import ProcessTimeline from "@/components/4Metodologia";
+import EcosystemFunnel from "@/components/FluxoMidias";
+import ConversionCalculator from "@/components/CalculadoraConversao";
+import TestimonialsSection from "@/components/TestimonialsSection";
+import ContactFormSection from "@/components/ContactFormSection";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
-import SpecialistSection from "@/components/5HenriqueArsego";
-import FunnelJourneySection from "@/components/3FunilJornada"
-import EcosystemFunnel from "@/components/FluxoMidias"
-import ConversionCalculator from "@/components/CalculadoraConversao"
-import TestimonialsSection from "@/components/TestimonialsSection"
-import ContactFormSection from "@/components/ContactFormSection"
-
-
-
 
 const Index = () => {
   return (
     <div className="min-h-screen bg-background">
       <Header />
       <main>
-        <HeroSection />        
-        <FunnelJourneySection />        
-        <SpecialistSection />                
-        <ProcessTimeline />
+        <HeroSection />
+        <ClientMarquee />
+        <SpecialistSection />
         <BentoGrid />
+        <Verticals />
+        <ProcessTimeline />
         <EcosystemFunnel />
+        <ConversionCalculator />
         <TestimonialsSection />
         <ContactFormSection />
       </main>

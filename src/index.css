@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,600;12..96,700;12..96,800&family=JetBrains+Mono:wght@400;500;600&family=Inter:wght@400;500;600;700&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -6,102 +6,71 @@
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 220 20% 10%;
+    /* Canvas — near-black, faint blue undertone (never pure #000) */
+    --background: 224 39% 5%;
+    --foreground: 210 40% 97%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 220 20% 10%;
+    --card: 222 35% 8%;
+    --card-foreground: 210 40% 97%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 220 20% 10%;
+    --popover: 222 35% 8%;
+    --popover-foreground: 210 40% 97%;
 
-    /* Charcoal primary */
-    --primary: 220 15% 15%;
-    --primary-foreground: 0 0% 100%;
+    --primary: 210 40% 97%;
+    --primary-foreground: 224 39% 5%;
 
-    /* Subtle gray secondary */
-    --secondary: 220 10% 96%;
-    --secondary-foreground: 220 15% 15%;
+    --secondary: 222 25% 13%;
+    --secondary-foreground: 210 40% 97%;
 
-    --muted: 220 10% 96%;
-    --muted-foreground: 220 10% 45%;
+    --muted: 222 25% 13%;
+    --muted-foreground: 217 15% 65%;
 
-    /* Electric Blue Accent */
-    --accent: 215 100% 50%;
-    --accent-foreground: 0 0% 100%;
+    /* Accent — signal blue, not the generic AI-purple */
+    --accent: 217 91% 60%;
+    --accent-foreground: 224 39% 5%;
 
-    --destructive: 0 84% 60%;
+    --destructive: 0 72% 55%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 220 13% 91%;
-    --input: 220 13% 91%;
-    --ring: 215 100% 50%;
+    --border: 217 20% 20%;
+    --input: 217 20% 20%;
+    --ring: 217 91% 60%;
 
-    --radius: 0.75rem;
+    --radius: 1rem;
 
-    /* Custom tokens */
-    --charcoal: 220 15% 15%;
-    --charcoal-light: 220 10% 25%;
-    --charcoal-muted: 220 10% 45%;
-    --electric-blue: 215 100% 50%;
-    --electric-blue-dark: 215 100% 42%;
-    --electric-blue-light: 215 100% 60%;
-    --surface-elevated: 220 20% 98%;
-    --surface-subtle: 220 15% 97%;
+    /* Brand tokens (kept for continuity with legacy component names) */
+    --charcoal: 210 40% 97%;
+    --charcoal-light: 217 20% 82%;
+    --charcoal-muted: 217 15% 62%;
+    --electric-blue: 217 91% 60%;
+    --electric-blue-dark: 221 83% 48%;
+    --electric-blue-light: 199 89% 62%;
+    --surface-elevated: 222 32% 10%;
+    --surface-subtle: 224 35% 6.5%;
 
-    /* Gradients */
-    --gradient-hero: linear-gradient(135deg, hsl(220 20% 98%) 0%, hsl(215 60% 97%) 100%);
-    --gradient-card: linear-gradient(145deg, hsl(0 0% 100%) 0%, hsl(220 20% 99%) 100%);
-    --gradient-cta: linear-gradient(135deg, hsl(215 100% 50%) 0%, hsl(215 100% 42%) 100%);
-    --gradient-text: linear-gradient(135deg, hsl(220 15% 15%) 0%, hsl(220 15% 25%) 100%);
+    /* Signature aurora — blue into cyan, never violet */
+    --gradient-hero: radial-gradient(120% 100% at 50% 0%, hsl(221 70% 14%) 0%, hsl(224 39% 5%) 55%);
+    --gradient-aurora: linear-gradient(115deg, hsl(217 91% 60%) 0%, hsl(199 89% 58%) 45%, hsl(172 70% 50%) 100%);
+    --gradient-card: linear-gradient(160deg, hsl(222 32% 10%) 0%, hsl(222 35% 7%) 100%);
+    --gradient-cta: linear-gradient(135deg, hsl(217 91% 60%) 0%, hsl(199 89% 52%) 100%);
+    --gradient-text: linear-gradient(135deg, hsl(210 40% 97%) 0%, hsl(217 30% 78%) 100%);
 
-    /* Shadows */
-    --shadow-sm: 0 1px 2px 0 hsl(220 15% 15% / 0.03);
-    --shadow-md: 0 4px 6px -1px hsl(220 15% 15% / 0.05), 0 2px 4px -2px hsl(220 15% 15% / 0.05);
-    --shadow-lg: 0 10px 15px -3px hsl(220 15% 15% / 0.05), 0 4px 6px -4px hsl(220 15% 15% / 0.05);
-    --shadow-xl: 0 20px 25px -5px hsl(220 15% 15% / 0.08), 0 8px 10px -6px hsl(220 15% 15% / 0.08);
-    --shadow-glow: 0 0 40px -10px hsl(215 100% 50% / 0.25);
-    --shadow-card: 0 2px 8px -2px hsl(220 15% 15% / 0.06), 0 4px 16px -4px hsl(220 15% 15% / 0.08);
-    --shadow-card-hover: 0 8px 24px -8px hsl(220 15% 15% / 0.1), 0 16px 40px -12px hsl(220 15% 15% / 0.12);
+    --shadow-sm: 0 1px 2px 0 hsl(224 60% 2% / 0.4);
+    --shadow-md: 0 4px 10px -2px hsl(224 60% 2% / 0.5);
+    --shadow-lg: 0 12px 28px -6px hsl(224 60% 2% / 0.55);
+    --shadow-xl: 0 24px 48px -12px hsl(224 60% 2% / 0.6);
+    --shadow-glow: 0 0 50px -8px hsl(217 91% 60% / 0.45);
+    --shadow-card: 0 2px 12px -4px hsl(224 60% 2% / 0.5), inset 0 1px 0 0 hsl(210 40% 97% / 0.04);
+    --shadow-card-hover: 0 16px 40px -12px hsl(224 60% 2% / 0.6), 0 0 0 1px hsl(217 91% 60% / 0.2);
 
-    --sidebar-background: 0 0% 98%;
-    --sidebar-foreground: 240 5.3% 26.1%;
-    --sidebar-primary: 240 5.9% 10%;
-    --sidebar-primary-foreground: 0 0% 98%;
-    --sidebar-accent: 240 4.8% 95.9%;
-    --sidebar-accent-foreground: 240 5.9% 10%;
-    --sidebar-border: 220 13% 91%;
-    --sidebar-ring: 215 100% 50%;
-  }
-
-  .dark {
-    --background: 220 20% 7%;
-    --foreground: 0 0% 98%;
-    --card: 220 20% 10%;
-    --card-foreground: 0 0% 98%;
-    --popover: 220 20% 10%;
-    --popover-foreground: 0 0% 98%;
-    --primary: 0 0% 98%;
-    --primary-foreground: 220 20% 7%;
-    --secondary: 220 15% 15%;
-    --secondary-foreground: 0 0% 98%;
-    --muted: 220 15% 15%;
-    --muted-foreground: 220 10% 60%;
-    --accent: 215 100% 50%;
-    --accent-foreground: 0 0% 100%;
-    --destructive: 0 62% 30%;
-    --destructive-foreground: 0 0% 98%;
-    --border: 220 15% 18%;
-    --input: 220 15% 18%;
-    --ring: 215 100% 50%;
-    --sidebar-background: 220 20% 7%;
-    --sidebar-foreground: 0 0% 90%;
-    --sidebar-primary: 215 100% 50%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 220 15% 12%;
-    --sidebar-accent-foreground: 0 0% 90%;
-    --sidebar-border: 220 15% 15%;
-    --sidebar-ring: 215 100% 50%;
+    --sidebar-background: 222 35% 8%;
+    --sidebar-foreground: 210 40% 90%;
+    --sidebar-primary: 217 91% 60%;
+    --sidebar-primary-foreground: 224 39% 5%;
+    --sidebar-accent: 222 25% 13%;
+    --sidebar-accent-foreground: 210 40% 90%;
+    --sidebar-border: 217 20% 18%;
+    --sidebar-ring: 217 91% 60%;
   }
 }
 
@@ -118,12 +87,34 @@
     @apply bg-background text-foreground font-sans antialiased;
     font-family: 'Inter', system-ui, sans-serif;
   }
+
+  h1, h2, h3, h4 {
+    font-family: 'Bricolage Grotesque', 'Inter', system-ui, sans-serif;
+  }
+
+  ::selection {
+    background: hsl(var(--accent) / 0.35);
+    color: hsl(var(--foreground));
+  }
 }
 
 @layer components {
+  .font-display {
+    font-family: 'Bricolage Grotesque', 'Inter', system-ui, sans-serif;
+  }
+
+  .font-mono {
+    font-family: 'JetBrains Mono', ui-monospace, monospace;
+  }
+
   .text-gradient {
     @apply bg-clip-text text-transparent;
     background-image: var(--gradient-text);
+  }
+
+  .text-gradient-aurora {
+    @apply bg-clip-text text-transparent;
+    background-image: var(--gradient-aurora);
   }
 
   .card-elevated {
@@ -143,6 +134,25 @@
   .section-gradient {
     background: var(--gradient-hero);
   }
+
+  /* Grain overlay — every reference site has this, it's what keeps a
+     dark flat surface from reading as an empty gradient PNG. */
+  .grain::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    opacity: 0.05;
+    mix-blend-mode: overlay;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  }
+
+  .bg-grid {
+    background-image:
+      linear-gradient(hsl(210 40% 97% / 0.05) 1px, transparent 1px),
+      linear-gradient(90deg, hsl(210 40% 97% / 0.05) 1px, transparent 1px);
+    background-size: 64px 64px;
+  }
 }
 
 @layer utilities {
@@ -152,6 +162,10 @@
 
   .animate-fade-in {
     animation: fadeIn 0.5s ease-out forwards;
+  }
+
+  .animate-marquee {
+    animation: marquee 40s linear infinite;
   }
 
   @keyframes fadeUp {
@@ -172,5 +186,10 @@
     to {
       opacity: 1;
     }
+  }
+
+  @keyframes marquee {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
   }
 }

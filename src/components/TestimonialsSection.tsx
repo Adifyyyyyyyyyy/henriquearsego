@@ -40,26 +40,24 @@ const testimonials = [
 ];
 
 const TestimonialCard = ({ item }) => (
-  // Removido o whitespace-nowrap do container pai e adicionado min-width e max-width flexíveis
-  <div className="flex-shrink-0 w-[85vw] md:w-[400px] p-6 mx-3 bg-white border border-slate-200 rounded-2xl hover:shadow-xl transition-all duration-300 flex flex-col justify-between h-full min-h-[280px]">
+  <div className="flex-shrink-0 w-[85vw] md:w-[400px] p-6 mx-3 bg-white/[0.03] border border-white/8 rounded-2xl hover:border-accent/25 transition-all duration-300 flex flex-col justify-between h-full min-h-[280px]">
     <div>
       <div className="flex items-center gap-3 mb-4">
-        <img src={item.avatar} alt={item.name} className="w-10 h-10 rounded-full object-cover border border-slate-100" />
-        <div className="whitespace-normal"> {/* Garante que nomes longos quebrem linha se necessário */}
-          <h3 className="text-sm font-bold text-slate-900 leading-none">{item.name}</h3>
-          <p className="text-[10px] md:text-xs text-slate-500 mt-1">{item.role}</p>
+        <img src={item.avatar} alt={item.name} className="w-10 h-10 rounded-full object-cover border border-white/10" />
+        <div className="whitespace-normal">
+          <h3 className="text-sm font-semibold text-foreground leading-none">{item.name}</h3>
+          <p className="text-[10px] md:text-xs text-muted-foreground mt-1">{item.role}</p>
         </div>
       </div>
-      
+
       <div className="flex gap-0.5 mb-4">
         {[...Array(5)].map((_, i) => (
-          <Star key={i} size={14} className="fill-electric text-electric" />
+          <Star key={i} size={14} className="fill-accent text-accent" />
         ))}
       </div>
 
-      {/* whitespace-normal é a chave aqui para o texto não vazar para a lateral */}
-      <blockquote className="text-sm text-slate-700 leading-relaxed italic whitespace-normal">
-        “{item.content} <span className="bg-electric/10 text-electric not-italic px-1.5 py-0.5 rounded-md font-medium inline-block mt-1">{item.highlight}</span>”
+      <blockquote className="text-sm text-foreground/80 leading-relaxed italic whitespace-normal">
+        “{item.content} <span className="bg-accent/10 text-accent not-italic px-1.5 py-0.5 rounded-md font-medium inline-block mt-1">{item.highlight}</span>”
       </blockquote>
     </div>
   </div>
@@ -70,13 +68,16 @@ const TestimonialsSection = () => {
   const tripleTestimonials = [...testimonials, ...testimonials, ...testimonials];
 
   return (
-    <section className="py-24 bg-slate-50/50 overflow-hidden">
+    <section className="py-24 lg:py-32 bg-surface-subtle overflow-hidden">
       <div className="container mb-12 text-center px-4">
-        <h2 className="text-3xl md:text-4xl font-bold text-charcoal mb-4">
-          Resultados que falam por <span className="text-electric">si</span>
+        <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-accent/25 bg-accent/5 text-accent text-xs font-mono uppercase tracking-widest mb-5">
+          Depoimentos reais
+        </span>
+        <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-semibold text-foreground mb-4 tracking-tight">
+          Resultados que falam por <span className="text-gradient-aurora">si</span>
         </h2>
-        <p className="text-charcoal-muted max-w-2xl mx-auto">
-          Empresas que escalaram suas operações com nossa metodologia.
+        <p className="text-muted-foreground max-w-2xl mx-auto">
+          Clientes que escalaram a operação de mídia com essa metodologia.
         </p>
       </div>
 

@@ -37,11 +37,11 @@ const ContactFormSection = () => {
   };
 
   return (
-    <section id="contactForm" className="relative py-24 section-gradient overflow-hidden">
+    <section id="contactForm" className="relative py-24 lg:py-32 section-gradient grain overflow-hidden">
       {/* Background blur */}
       <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute top-10 left-1/4 w-96 h-96 bg-electric/5 rounded-full blur-3xl" />
-        <div className="absolute bottom-10 right-1/4 w-80 h-80 bg-electric/3 rounded-full blur-3xl" />
+        <div className="absolute top-10 left-1/4 w-96 h-96 bg-accent/10 rounded-full blur-[100px]" />
+        <div className="absolute bottom-10 right-1/4 w-80 h-80 bg-electric-light/5 rounded-full blur-[100px]" />
       </div>
 
       <div className="container relative z-10">
@@ -52,9 +52,9 @@ const ContactFormSection = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
-            className="text-3xl md:text-4xl font-bold text-charcoal mb-4"
+            className="font-display text-3xl md:text-4xl lg:text-5xl font-semibold text-foreground mb-4 tracking-tight"
           >
-            Agende um Diagnóstico Estratégico
+            Agende um <span className="text-gradient-aurora">Diagnóstico Estratégico</span>
           </motion.h2>
 
           {/* Subheadline */}
@@ -63,7 +63,7 @@ const ContactFormSection = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.1 }}
             viewport={{ once: true }}
-            className="text-lg text-charcoal-muted max-w-2xl mx-auto"
+            className="text-lg text-muted-foreground max-w-2xl mx-auto"
           >
             Entenda exatamente o que está travando seus resultados e onde focar para crescer de forma organizada.
           </motion.p>
@@ -75,46 +75,46 @@ const ContactFormSection = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
           viewport={{ once: true }}
-          className="max-w-2xl mx-auto bg-white/70 backdrop-blur-md border border-charcoal/10 rounded-2xl p-8 md:p-10 shadow-lg"
+          className="max-w-2xl mx-auto bg-white/[0.03] backdrop-blur-md border border-white/10 rounded-2xl p-8 md:p-10 shadow-xl"
         >
           {status === "success" ? (
             <div className="text-center py-10 space-y-4">
-              <CheckCircle2 className="w-16 h-16 text-green-500 mx-auto" />
-              <h3 className="text-2xl font-bold text-charcoal">Solicitação enviada!</h3>
-              <p className="text-charcoal-muted">Obrigado pelo contato. Retornarei em breve.</p>
+              <CheckCircle2 className="w-16 h-16 text-emerald-400 mx-auto" />
+              <h3 className="font-display text-2xl font-semibold text-foreground">Solicitação enviada!</h3>
+              <p className="text-muted-foreground">Obrigado pelo contato. Retornarei em breve.</p>
               <Button variant="outline" onClick={() => setStatus("idle")}>Voltar</Button>
             </div>
           ) : (
             <form onSubmit={handleSubmit} className="space-y-6">
               {/* Nome */}
               <div>
-                <label className="block text-sm font-medium text-charcoal mb-1">
+                <label className="block text-sm font-medium text-foreground mb-1">
                   Seu nome
                 </label>
                 <Input
                   name="nome"
                   required
                   placeholder="Ex: Henrique Arsego"
-                  className="h-12"
+                  className="h-12 bg-white/[0.03] border-white/10 text-foreground placeholder:text-muted-foreground/60"
                 />
               </div>
 
               {/* Empresa */}
               <div>
-                <label className="block text-sm font-medium text-charcoal mb-1">
+                <label className="block text-sm font-medium text-foreground mb-1">
                   Empresa
                 </label>
                 <Input
                   name="empresa"
                   required
                   placeholder="Nome da empresa"
-                  className="h-12"
+                  className="h-12 bg-white/[0.03] border-white/10 text-foreground placeholder:text-muted-foreground/60"
                 />
               </div>
 
               {/* Email */}
               <div>
-                <label className="block text-sm font-medium text-charcoal mb-1">
+                <label className="block text-sm font-medium text-foreground mb-1">
                   Email corporativo
                 </label>
                 <Input
@@ -122,20 +122,20 @@ const ContactFormSection = () => {
                   type="email"
                   required
                   placeholder="voce@empresa.com"
-                  className="h-12"
+                  className="h-12 bg-white/[0.03] border-white/10 text-foreground placeholder:text-muted-foreground/60"
                 />
               </div>
 
               {/* Desafio */}
               <div>
-                <label className="block text-sm font-medium text-charcoal mb-1">
+                <label className="block text-sm font-medium text-foreground mb-1">
                   Qual é o principal desafio do seu marketing hoje?
                 </label>
                 <Textarea
                   name="desafio"
                   required
                   placeholder="Ex: Investimos em anúncios, mas não sabemos quais canais realmente geram resultado..."
-                  className="min-h-[120px]"
+                  className="min-h-[120px] bg-white/[0.03] border-white/10 text-foreground placeholder:text-muted-foreground/60"
                 />
               </div>
 
@@ -158,7 +158,7 @@ const ContactFormSection = () => {
               </Button>
 
               {/* Micro confiança */}
-              <p className="text-xs text-charcoal-muted text-center mt-2">
+              <p className="text-xs text-muted-foreground text-center mt-2">
                 Diagnóstico gratuito • Sem compromisso • Resposta em até 1 dia útil
               </p>
             </form>

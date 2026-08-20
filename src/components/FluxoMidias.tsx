@@ -1,118 +1,122 @@
 import React, { useState, useEffect, useCallback } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { 
-  BarChart3, Database, Search, 
-  Smartphone, Globe, Cpu, ArrowDown 
+import {
+  BarChart3, Database, Search,
+  Smartphone, Globe, Cpu, ArrowDown
 } from "lucide-react";
 
 const dataSource = [
-  { id: "meta", name: "Meta Ads", sub: "Data Signals", icon: Smartphone, color: "#1877F2", y: 32 },
-  { id: "google", name: "Google Ads", sub: "Search Intent", icon: Search, color: "#4285F4", y: 96 },
-  { id: "capi", name: "Meta CAPI", sub: "Server Events", icon: Database, color: "#00a884", y: 160 },
-  { id: "analytics", name: "GA4", sub: "User Behavior", icon: BarChart3, color: "#F9AB00", y: 224 },
-  { id: "crm", name: "CRM Data", sub: "Offline Conversions", icon: Globe, color: "#7c3aed", y: 288 },
+  { id: "meta", name: "Meta Ads", sub: "Data Signals", icon: Smartphone, color: "#3B82F6", y: 32 },
+  { id: "google", name: "Google Ads", sub: "Search Intent", icon: Search, color: "#38BDF8", y: 96 },
+  { id: "capi", name: "Meta CAPI", sub: "Server Events", icon: Database, color: "#2DD4BF", y: 160 },
+  { id: "analytics", name: "GA4", sub: "User Behavior", icon: BarChart3, color: "#60A5FA", y: 224 },
+  { id: "crm", name: "CRM Data", sub: "Offline Conversions", icon: Globe, color: "#818CF8", y: 288 },
 ];
 
 const insights = {
-  meta: { title: "Otimização de Público", text: "Identificamos padrões de compra que permitem reduzir seu CPL em até 30% via Lookalike 1%." },
-  google: { title: "Escala de Intenção", text: "Termos de busca de fundo de funil detectados com baixa concorrência e alto ROI." },
-  capi: { title: "Rastreamento 100%", text: "Eventos de servidor recuperando 25% das conversões perdidas pelo bloqueio de cookies do iOS." },
-  analytics: { title: "Gargalo no Checkout", text: "Análise de comportamento detectou fricção na etapa de pagamento mobile. Correção imediata sugerida." },
-  crm: { title: "LTV Inteligente", text: "Dados de vendas indicam que clientes do canal Meta têm 40% mais recompra que a média." },
+  meta: { title: "Otimização de público", text: "Padrão de compra mapeado pra reduzir CPL com lookalike de base própria, não achismo de interesse." },
+  google: { title: "Escala de intenção", text: "Termo de busca de fundo de funil com baixa concorrência e alto ROI, isolado da campanha de marca." },
+  capi: { title: "Rastreamento sem furo", text: "Evento de servidor recuperando conversão perdida por bloqueio de cookie no iOS." },
+  analytics: { title: "Gargalo real", text: "Comportamento de usuário aponta fricção específica no funil — não estimativa, dado de sessão." },
+  crm: { title: "LTV por canal", text: "Dado de vendas cruzado com origem de mídia pra saber qual canal realmente traz cliente que fica." },
 };
 
 const EcosystemFunnel = () => {
   const [activeIndex, setActiveIndex] = useState(0);
   const [isPaused, setIsPaused] = useState(false);
 
-  // Função para mudar o index de forma segura
-  const goToIndex = useCallback((index) => {
+  const goToIndex = useCallback((index: number) => {
     setActiveIndex(index);
   }, []);
 
   useEffect(() => {
     if (isPaused) {
-      // Se estiver pausado (clicou), define um timer para voltar ao automático após 15s
       const resumeTimeout = setTimeout(() => setIsPaused(false), 15000);
       return () => clearTimeout(resumeTimeout);
     }
 
     const interval = setInterval(() => {
       setActiveIndex((prev) => (prev + 1) % dataSource.length);
-    }, 8000); 
+    }, 8000);
 
     return () => clearInterval(interval);
   }, [isPaused]);
 
-  const handleManualClick = (index) => {
+  const handleManualClick = (index: number) => {
     setIsPaused(true);
     goToIndex(index);
   };
 
   const activeData = dataSource[activeIndex];
-  const activeInsight = insights[activeData.id];
+  const activeInsight = insights[activeData.id as keyof typeof insights];
 
   return (
-    <section id="monitoramento" className="py-12 lg:py-24 bg-white overflow-hidden">
-      <div className="container max-w-6xl mx-auto px-4">
-        
-        {/* Cabeçalho */}
+    <section id="monitoramento" className="py-24 lg:py-32 bg-surface-subtle overflow-hidden relative">
+      <div className="container max-w-6xl mx-auto px-4 relative">
         <div className="text-center mb-16 lg:mb-24">
-          <motion.h2 
-            initial={{ opacity: 0, y: -20 }}
+          <motion.span
+            initial={{ opacity: 0, y: -10 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-3xl md:text-4xl lg:text-5xl font-bold text-charcoal mb-6 leading-tight"
+            className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-accent/25 bg-accent/5 text-accent text-xs font-mono uppercase tracking-widest mb-5"
           >
-            Interação do funil <span className="text-electric">monitorada por IA</span>
+            <Cpu size={13} />
+            O stack real
+          </motion.span>
+          <motion.h2
+            initial={{ opacity: 0, y: -10 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.1 }}
+            className="font-display text-3xl md:text-4xl lg:text-5xl font-semibold text-foreground mb-6 leading-tight tracking-tight"
+          >
+            Cinco fontes de dado, <span className="text-gradient-aurora">um único painel</span>
           </motion.h2>
-          <motion.p 
-            initial={{ opacity: 0, y: 20 }}
+          <motion.p
+            initial={{ opacity: 0, y: 10 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.2 }}
-            className="text-lg text-charcoal-muted max-w-2xl mx-auto"
+            className="text-lg text-muted-foreground max-w-2xl mx-auto"
           >
-            Receba sugestões personalizadas de acordo com cada etapa e otimize seu ROI em tempo real.
+            É assim que Meta, Google, CAPI, GA4 e CRM conversam entre si em vez de virar cinco planilhas soltas.
           </motion.p>
         </div>
 
-        {/* Layout Principal */}
         <div className="flex flex-col lg:flex-row items-center justify-between gap-8 lg:gap-12 relative">
-          
-          {/* 1. Origens de Dados (Clicáveis) */}
+          {/* Data sources */}
           <div className="grid grid-cols-3 sm:grid-cols-5 lg:flex lg:flex-col gap-3 w-full lg:w-auto relative z-10">
             {dataSource.map((item, index) => (
               <motion.button
                 key={item.id}
                 onClick={() => handleManualClick(index)}
-                animate={{ 
+                animate={{
                   opacity: activeIndex === index ? 1 : 0.4,
                   scale: activeIndex === index ? 1.05 : 1,
-                  borderColor: activeIndex === index ? item.color : "#e5e7eb",
-                  boxShadow: activeIndex === index ? `0 4px 20px ${item.color}20` : "none"
+                  borderColor: activeIndex === index ? item.color : "rgba(255,255,255,0.08)",
+                  boxShadow: activeIndex === index ? `0 4px 20px ${item.color}30` : "none",
                 }}
                 transition={{ duration: 0.3 }}
-                className="flex flex-col lg:flex-row items-center gap-2 lg:gap-4 p-2 lg:p-3 bg-white border rounded-xl shadow-sm cursor-pointer hover:bg-slate-50 transition-colors"
+                className="flex flex-col lg:flex-row items-center gap-2 lg:gap-4 p-2 lg:p-3 bg-white/[0.02] border rounded-xl cursor-pointer hover:bg-white/[0.05] transition-colors"
               >
-                <div 
+                <div
                   className="w-10 h-10 rounded-lg flex items-center justify-center text-white shrink-0 shadow-sm transition-transform active:scale-90"
                   style={{ backgroundColor: item.color }}
                 >
                   <item.icon size={20} />
                 </div>
                 <div className="hidden lg:block text-left">
-                  <p className="text-sm font-bold text-slate-800 leading-tight">{item.name}</p>
-                  <p className="text-[10px] text-slate-500 uppercase tracking-tighter">{item.sub}</p>
+                  <p className="text-sm font-semibold text-foreground leading-tight">{item.name}</p>
+                  <p className="text-[10px] text-muted-foreground uppercase tracking-tighter font-mono">{item.sub}</p>
                 </div>
               </motion.button>
             ))}
           </div>
 
-          {/* 2. Processador Central */}
+          {/* Central processor */}
           <div className="relative flex flex-col items-center justify-center flex-1 py-4 lg:py-0 w-full lg:h-[400px]">
-            <svg 
-              className="hidden lg:block absolute inset-0 w-full h-full pointer-events-none" 
+            <svg
+              className="hidden lg:block absolute inset-0 w-full h-full pointer-events-none"
               viewBox="0 0 400 320"
               fill="none"
             >
@@ -121,7 +125,7 @@ const EcosystemFunnel = () => {
                 const pathData = `M 0 ${item.y} C 150 ${item.y}, 150 160, 300 160`;
                 return (
                   <g key={`path-${item.id}`}>
-                    <path d={pathData} stroke="#e5e7eb" strokeWidth="2" strokeDasharray="4 4" />
+                    <path d={pathData} stroke="rgba(255,255,255,0.08)" strokeWidth="2" strokeDasharray="4 4" />
                     <AnimatePresence>
                       {isActive && (
                         <motion.path
@@ -139,29 +143,31 @@ const EcosystemFunnel = () => {
                   </g>
                 );
               })}
-              <path d="M 300 160 L 400 160" stroke="#e5e7eb" strokeWidth="2" strokeDasharray="4 4" />
-              <motion.path 
-                d="M 300 160 L 400 160" 
-                stroke={activeData.color} 
-                strokeWidth="3" 
-                animate={{ opacity: [0.3, 1, 0.3] }} 
-                transition={{ repeat: Infinity, duration: 3 }} 
+              <path d="M 300 160 L 400 160" stroke="rgba(255,255,255,0.08)" strokeWidth="2" strokeDasharray="4 4" />
+              <motion.path
+                d="M 300 160 L 400 160"
+                stroke={activeData.color}
+                strokeWidth="3"
+                animate={{ opacity: [0.3, 1, 0.3] }}
+                transition={{ repeat: Infinity, duration: 3 }}
               />
             </svg>
 
             <div className="flex flex-col items-center">
-              <div className="bg-white border border-slate-200 px-6 py-4 lg:px-8 lg:py-6 rounded-2xl lg:rounded-3xl shadow-xl flex flex-col items-center relative z-20">
+              <div className="bg-white/[0.03] border border-white/10 px-6 py-4 lg:px-8 lg:py-6 rounded-2xl lg:rounded-3xl backdrop-blur-sm flex flex-col items-center relative z-20">
                 <motion.div
                   animate={{ rotate: 360 }}
                   transition={{ duration: 15, repeat: Infinity, ease: "linear" }}
-                  className="text-electric mb-2 lg:mb-3"
+                  className="text-accent mb-2 lg:mb-3"
                 >
                   <Cpu size={32} className="lg:w-11 lg:h-11" strokeWidth={1.5} />
                 </motion.div>
                 <div className="text-center">
-                  <p className="text-base lg:text-xl font-bold text-slate-900 leading-tight">Deep Analysis</p>
-                  <p className="text-[8px] lg:text-[10px] font-black text-electric tracking-[0.2em] uppercase">
-                    {isPaused ? "MANUAL OVERRIDE" : "IA-POWERED"}
+                  <p className="font-display text-base lg:text-xl font-semibold text-foreground leading-tight">
+                    Análise cruzada
+                  </p>
+                  <p className="font-mono text-[8px] lg:text-[10px] font-semibold text-accent tracking-[0.2em] uppercase">
+                    {isPaused ? "SELEÇÃO MANUAL" : "AUTO-ROTAÇÃO"}
                   </p>
                 </div>
               </div>
@@ -171,7 +177,7 @@ const EcosystemFunnel = () => {
             </div>
           </div>
 
-          {/* 3. Card de Insight */}
+          {/* Insight card */}
           <div className="w-full lg:max-w-sm relative z-30">
             <AnimatePresence mode="wait">
               <motion.div
@@ -179,45 +185,35 @@ const EcosystemFunnel = () => {
                 initial={{ opacity: 0, scale: 0.98, y: 10 }}
                 animate={{ opacity: 1, scale: 1, y: 0 }}
                 exit={{ opacity: 0, scale: 0.98, y: -10 }}
-                className="bg-white border border-slate-200 p-6 lg:p-8 rounded-2xl lg:rounded-3xl shadow-xl lg:shadow-2xl relative overflow-hidden min-h-[180px] lg:h-56 flex flex-col justify-center"
+                className="bg-white/[0.02] border border-white/10 p-6 lg:p-8 rounded-2xl lg:rounded-3xl relative overflow-hidden min-h-[180px] lg:h-56 flex flex-col justify-center"
               >
-                {/* Barra de Tempo (Reinicia ao clicar) */}
                 {!isPaused && (
-                  <motion.div 
+                  <motion.div
                     key={`timer-${activeIndex}`}
                     initial={{ width: 0 }}
                     animate={{ width: "100%" }}
                     transition={{ duration: 8, ease: "linear" }}
-                    className="absolute top-0 left-0 h-1.5"
+                    className="absolute top-0 left-0 h-1"
                     style={{ backgroundColor: activeData.color }}
                   />
                 )}
                 {isPaused && (
-                   <div className="absolute top-0 left-0 w-full h-1.5 opacity-30" style={{ backgroundColor: activeData.color }} />
+                  <div className="absolute top-0 left-0 w-full h-1 opacity-30" style={{ backgroundColor: activeData.color }} />
                 )}
-                
+
                 <div className="flex items-center gap-3 mb-3 lg:mb-4">
-                  <div className="w-8 h-8 rounded-lg flex items-center justify-center text-white shrink-0 shadow-sm" style={{ backgroundColor: activeData.color }}>
+                  <div className="w-8 h-8 rounded-lg flex items-center justify-center text-white shrink-0" style={{ backgroundColor: activeData.color }}>
                     <activeData.icon size={16} />
                   </div>
-                  <h3 className="text-base lg:text-lg font-bold text-slate-800 leading-tight">{activeInsight.title}</h3>
+                  <h3 className="font-display text-base lg:text-lg font-semibold text-foreground leading-tight">{activeInsight.title}</h3>
                 </div>
-                
-                <p className="text-xs lg:text-sm text-slate-600 leading-relaxed italic">
+
+                <p className="text-xs lg:text-sm text-muted-foreground leading-relaxed italic">
                   "{activeInsight.text}"
                 </p>
-
-                {isPaused && (
-                  <div className="mt-4 flex justify-end">
-                    <span className="text-[9px] font-bold text-slate-400 uppercase tracking-widest animate-pulse">
-                      IA Pausada
-                    </span>
-                  </div>
-                )}
               </motion.div>
             </AnimatePresence>
           </div>
-
         </div>
       </div>
     </section>

@@ -1,71 +1,51 @@
 import { motion } from "framer-motion";
-import { Crosshair, Workflow, LineChart, TrendingUp, Code2, Settings, Zap, Target } from "lucide-react";
+import { Workflow, LineChart, TrendingUp, Terminal, Zap } from "lucide-react";
 
 const features = [
   {
-    icon: Crosshair,
-    title: "Rastreamento com Precisão",
-    description: "Implementação do GTM server-side, GA4, Pixel e API de Conversões (CAPI) para contornar perdas das UTMs e garantir dados precisos para suas campanhas.",
-    gradient: "from-blue-500/10 to-cyan-500/10",
-    iconBg: "bg-blue-500/10",
-    iconColor: "text-blue-600",
+    icon: Terminal,
+    title: "Rastreamento com precisão",
+    description:
+      "GTM server-side, GA4, Pixel e API de Conversões (CAPI) implementados pra fechar o buraco das UTMs e devolver dado confiável pra otimização.",
     large: true,
   },
   {
     icon: Workflow,
-    title: "Automação com n8n/Make",
-    description: "Conectando seu tráfego diretamente ao seu CRM e WhatsApp. Leads qualificados em tempo real.",
-    gradient: "from-purple-500/10 to-pink-500/10",
-    iconBg: "bg-purple-500/10",
-    iconColor: "text-purple-600",
+    title: "Automação com n8n",
+    description:
+      "Tráfego conectado direto ao CRM e ao WhatsApp via API — lead qualificado chega em tempo real, sem planilha no meio do caminho.",
     large: false,
   },
   {
     icon: LineChart,
-    title: "Dashboards em Tempo Real",
-    description: "Visualização clara de leads e vendas sem relatórios manuais. Dados atualizados minuto a minuto.",
-    gradient: "from-emerald-500/10 to-teal-500/10",
-    iconBg: "bg-emerald-500/10",
-    iconColor: "text-emerald-600",
+    title: "Dashboards de BI",
+    description:
+      "Dado bruto virando painel acionável. Decisão de mídia baseada em número atualizado, não em relatório manual de sexta à tarde.",
     large: false,
   },
   {
     icon: TrendingUp,
-    title: "Geração de Demanda",
-    description: "Estratégias de tráfego para negócios que buscam clientes, não apenas interessados. Foco em métricas de performance e aquisição.",
-    gradient: "from-orange-500/10 to-amber-500/10",
-    iconBg: "bg-orange-500/10",
-    iconColor: "text-orange-600",
+    title: "Geração de demanda",
+    description:
+      "Estratégia de mídia paga (Meta, Google, TikTok, YouTube) desenhada pra funil de conversão real — B2B e B2C, com otimização orientada a ROI.",
     large: true,
   },
 ];
 
 const containerVariants = {
   hidden: { opacity: 0 },
-  visible: {
-    opacity: 1,
-    transition: {
-      staggerChildren: 0.1,
-    },
-  },
+  visible: { opacity: 1, transition: { staggerChildren: 0.1 } },
 };
 
 const itemVariants = {
   hidden: { opacity: 0, y: 20 },
-  visible: {
-    opacity: 1,
-    y: 0,
-    transition: {
-      duration: 0.5,
-    },
-  },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
 };
 
 const BentoGrid = () => {
   return (
-    <section id="diferenciais" className="py-24 lg:py-32 bg-surface-subtle">
+    <section id="diferenciais" className="py-24 lg:py-32 bg-background relative">
       <div className="container">
-        {/* Section Header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -73,86 +53,76 @@ const BentoGrid = () => {
           transition={{ duration: 0.5 }}
           className="text-center mb-16"
         >
-          <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-electric/10 text-electric text-sm font-medium mb-4">
-            <Code2 size={16} />
-            Diferenciais Técnicos
+          <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-accent/25 bg-accent/5 text-accent text-xs font-mono uppercase tracking-widest mb-5">
+            <Terminal size={14} />
+            Diferenciais técnicos
           </span>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-charcoal mb-4">
-            Infraestrutura de dados{" "}
-            <span className="text-electric">que funciona</span>
+          <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-semibold text-foreground mb-4 tracking-tight">
+            Infraestrutura de dado{" "}
+            <span className="text-gradient-aurora">que funciona de verdade</span>
           </h2>
-          <p className="text-lg text-charcoal-muted max-w-2xl mx-auto">
-            Soluções técnicas que vão além de relatórios bonitos. Implemento a infraestrutura completa para escalar seus resultados.
+          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+            Não é só relatório bonito. É a infraestrutura completa — do pixel
+            ao dashboard — pra escalar mídia com base em número real.
           </p>
         </motion.div>
 
-        {/* Bento Grid */}
         <motion.div
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6"
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5"
         >
-          {features.map((feature, index) => (
+          {features.map((feature) => (
             <motion.div
               key={feature.title}
               variants={itemVariants}
-              className={`group relative overflow-hidden rounded-2xl bg-gradient-to-br ${feature.gradient} border border-charcoal/5 p-6 lg:p-8 card-elevated transition-all duration-300 hover:-translate-y-1 ${
+              className={`group relative overflow-hidden rounded-2xl border border-white/8 bg-white/[0.02] p-6 lg:p-8 card-elevated transition-all duration-300 hover:-translate-y-1 hover:border-accent/25 ${
                 feature.large ? "lg:col-span-2" : ""
               }`}
             >
-              {/* Background Pattern */}
-              <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-                <div className="absolute top-0 right-0 w-32 h-32 bg-electric/5 rounded-full blur-2xl" />
-              </div>
+              <div className="absolute top-0 right-0 w-32 h-32 bg-accent/0 group-hover:bg-accent/10 rounded-full blur-2xl transition-all duration-500" />
 
               <div className="relative z-10">
-                {/* Icon */}
-                <div className={`inline-flex items-center justify-center w-12 h-12 rounded-xl ${feature.iconBg} mb-5`}>
-                  <feature.icon className={`w-6 h-6 ${feature.iconColor}`} />
+                <div className="inline-flex items-center justify-center w-11 h-11 rounded-xl bg-accent/10 border border-accent/20 mb-5">
+                  <feature.icon className="w-5 h-5 text-accent" />
                 </div>
-
-                {/* Content */}
-                <h3 className="text-xl font-semibold text-charcoal mb-3 group-hover:text-electric transition-colors duration-300">
+                <h3 className="font-display text-xl font-semibold text-foreground mb-3">
                   {feature.title}
                 </h3>
-                <p className="text-charcoal-muted leading-relaxed">
+                <p className="text-muted-foreground leading-relaxed text-sm">
                   {feature.description}
                 </p>
-
-                {/* Hover Arrow */}
-                <div className="mt-4 flex items-center gap-2 text-electric opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-x-[-10px] group-hover:translate-x-0">
-                  <a href="#contactForm"><span className="text-sm font-medium">Saiba mais</span></a>
+                <div className="mt-5 flex items-center gap-2 text-accent opacity-0 group-hover:opacity-100 transition-all duration-300 translate-x-[-8px] group-hover:translate-x-0">
+                  <a href="#contactForm">
+                    <span className="text-sm font-medium">Saiba mais</span>
+                  </a>
                   <Zap size={14} />
                 </div>
-              </div>
-
-              {/* Decorative Elements */}
-              <div className="absolute bottom-0 right-0 opacity-5 group-hover:opacity-10 transition-opacity duration-300">
-                <feature.icon className="w-32 h-32 text-charcoal" />
               </div>
             </motion.div>
           ))}
         </motion.div>
 
-        {/* Bottom Stats */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.3 }}
-          className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-8"
+          className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-8 border-t border-white/8 pt-12"
         >
           {[
-            { value: "98%", label: "Taxa de Precisão no tracking" },
-            { value: "40%", label: "Redução de Custo por Oportunidade" },
-            { value: "2x", label: "Velocidade com Automação" },
-            { value: "24/7", label: "Monitoramento" },
+            { value: "100%", label: "precisão no rastreamento de eventos" },
+            { value: "n8n", label: "automação entre Meta, Google, TikTok e CRM" },
+            { value: "GA4", label: "arquitetura de dados server-side" },
+            { value: "24/7", label: "campanhas monitoradas" },
           ].map((stat) => (
             <div key={stat.label} className="text-center">
-              <div className="text-3xl lg:text-4xl font-bold text-electric mb-1">{stat.value}</div>
-              <div className="text-sm text-charcoal-muted">{stat.label}</div>
+              <div className="font-mono text-2xl lg:text-3xl font-semibold text-accent mb-1">
+                {stat.value}
+              </div>
+              <div className="text-xs text-muted-foreground">{stat.label}</div>
             </div>
           ))}
         </motion.div>

@@ -1,71 +1,82 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, BarChart3, Database } from "lucide-react";
+import { ArrowRight } from "lucide-react";
+import ParticleField from "./ParticleField";
 
 const HeroSection = () => {
   const whatsappLink =
     "https://wa.me/5551996719696?text=Olá! Gostaria de agendar um diagnóstico para minha empresa.";
 
-  const users = [
+  const avatars = [
     "https://framerusercontent.com/images/ETgoVdeITLLIYCHTFNeVuZDMyQY.png",
     "https://framerusercontent.com/images/bnJJiW5Vfixlrz7M2pzoeyHBU.png",
     "https://lh3.googleusercontent.com/a-/ALV-UjXKiUl2qV9y_x95yE2NHMoFFYE296pL07-EPKWXhFnpfS_ncBUXmA=s36-c-rp-mo-br100",
     "https://framerusercontent.com/images/X0pqhTmlK8gdYqPbljhuLXlyd0I.png",
   ];
 
+  const stats = [
+    { value: "11+", label: "anos em mídia paga & growth" },
+    { value: "20+", label: "marcas atendidas, de fintech a saúde" },
+    { value: "100%", label: "rastreamento server-side (GTM/CAPI)" },
+  ];
+
   return (
-    <section className="relative flex items-center section-gradient overflow-hidden min-h-[90svh] lg:min-h-screen">
-
-      {/* Background visuals (non-blocking) */}
-      <div className="absolute inset-0 pointer-events-none">
-        <div className="hidden sm:block absolute top-20 right-20 w-80 h-80 bg-electric/5 rounded-full blur-3xl" />
-        <div className="hidden sm:block absolute bottom-20 left-20 w-72 h-72 bg-electric/3 rounded-full blur-3xl" />
-
-        <motion.div
-          className="hidden lg:block absolute top-1/3 right-1/4 text-electric/10"
-          animate={{ y: [-8, 8, -8] }}
-          transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
-        >
-          <BarChart3 size={110} strokeWidth={1} />
-        </motion.div>
-
-        <motion.div
-          className="hidden lg:block absolute bottom-1/4 left-1/3 text-charcoal/5"
-          animate={{ y: [8, -8, 8] }}
-          transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
-        >
-          <Database size={80} strokeWidth={1} />
-        </motion.div>
+    <section className="relative flex items-center overflow-hidden min-h-[100svh] bg-background section-gradient grain">
+      {/* Signature visual — ambient node network, blue → cyan */}
+      <div className="absolute inset-0 opacity-70">
+        <ParticleField />
       </div>
 
-      <div className="container relative z-10 px-4 py-20 sm:py-24 lg:py-32">
-        <div className="max-w-4xl mx-auto text-center flex flex-col items-center">
+      {/* Aurora glow */}
+      <div className="absolute inset-0 pointer-events-none overflow-hidden">
+        <div className="absolute -top-40 left-1/2 -translate-x-1/2 w-[900px] h-[700px] rounded-full bg-accent/20 blur-[140px]" />
+        <div className="absolute bottom-0 right-0 w-[500px] h-[500px] rounded-full bg-electric-light/10 blur-[120px]" />
+      </div>
 
-          {/* H1 — LCP element */}
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold text-charcoal leading-[1.15] tracking-tight mb-10">
-  Consultoria de{" "}
-  <span className="relative inline-block mr-2">
-    <span className="relative z-10">Marketing Digital</span>
-    <span className="absolute bottom-2 left-0 right-0 h-3 bg-electric/20 -z-0" />
-  </span>
-  <span className="block text-electric mt-2 sm:mt-1 text-3xl sm:text-4xl lg:text-4xl font-semibold">
-    Orientada por Dados para Destravar Resultados
-  </span>
-</h1>
+      {/* Base grid texture — data/engineering identity */}
+      <div className="absolute inset-0 bg-grid [mask-image:radial-gradient(ellipse_80%_60%_at_50%_0%,black,transparent)]" />
 
+      <div className="container relative z-10 px-4 py-28 sm:py-32">
+        <div className="max-w-5xl mx-auto text-center flex flex-col items-center">
+          <motion.span
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+            className="font-mono text-xs sm:text-sm text-accent tracking-[0.2em] uppercase mb-8 inline-flex items-center gap-2 border border-accent/25 bg-accent/5 rounded-full px-4 py-1.5"
+          >
+            <span className="w-1.5 h-1.5 rounded-full bg-accent animate-pulse" />
+            Analista Sênior de Mídia Paga · Chapecó, SC
+          </motion.span>
 
+          <motion.h1
+            initial={{ opacity: 0, y: 16 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.1 }}
+            className="font-display text-4xl sm:text-6xl lg:text-7xl font-semibold text-foreground leading-[1.05] tracking-tight mb-8"
+          >
+            Tráfego pago com{" "}
+            <span className="text-gradient-aurora italic">infraestrutura de dado</span>{" "}
+            por trás — não só criativo bom e palpite.
+          </motion.h1>
 
-          {/* Subheadline */}
-          <p className="text-base sm:text-lg md:text-xl text-charcoal-muted max-w-3xl mb-10 sm:mb-12 leading-relaxed">
-            <span className="text-charcoal font-medium">Analiso</span> toda a
-            jornada, canais e métricas do seu marketing para mostrar exatamente{" "}
-            <span className="text-charcoal font-medium">
-              o que funciona, o que está travando o crescimento e onde investir
-            </span>.
-          </p>
+          <motion.p
+            initial={{ opacity: 0, y: 16 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="text-base sm:text-lg md:text-xl text-muted-foreground max-w-2xl mb-10 leading-relaxed"
+          >
+            Gerencio campanhas em Meta, Google, TikTok e YouTube com
+            rastreamento server-side (GTM, GA4, CAPI), dashboards de BI e
+            automação via n8n — pra você decidir com dado real, não com CPL
+            de aba anônima.
+          </motion.p>
 
-          {/* CTA */}
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-2 w-full">
+          <motion.div
+            initial={{ opacity: 0, y: 16 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.3 }}
+            className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12 w-full"
+          >
             <Button
               variant="cta"
               size="xl"
@@ -73,32 +84,53 @@ const HeroSection = () => {
               className="group min-h-[64px] w-full sm:w-auto sm:min-w-[320px]"
             >
               <a
-                href="#contactForm"
+                href={whatsappLink}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="flex items-center justify-center gap-3"
               >
                 <span>Solicitar Diagnóstico</span>
                 <ArrowRight className="transition-transform group-hover:translate-x-1" />
               </a>
             </Button>
-          </div>
+          </motion.div>
 
-          {/* Micro-copy */}
-          <p className="text-sm text-charcoal-muted mb-8">
-            Análise estratégica sem compromisso
-          </p>
+          {/* Dashboard-style stat readouts — grounded in the CV, not
+              generic superlatives */}
+          <motion.div
+            initial={{ opacity: 0, y: 16 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.4 }}
+            className="w-full max-w-2xl grid grid-cols-3 divide-x divide-white/10 border border-white/10 rounded-2xl bg-white/[0.02] backdrop-blur-sm"
+          >
+            {stats.map((s) => (
+              <div key={s.label} className="px-3 py-5 sm:py-6 text-center">
+                <div className="font-mono text-2xl sm:text-3xl font-semibold text-foreground">
+                  {s.value}
+                </div>
+                <div className="text-[11px] sm:text-xs text-muted-foreground mt-1 leading-tight">
+                  {s.label}
+                </div>
+              </div>
+            ))}
+          </motion.div>
 
-
-          {/* Social proof */}
-          <div className="inline-flex items-center gap-4 bg-white/5 border border-charcoal/10 px-4 py-2 rounded-full backdrop-blur-sm mb-10">
+          {/* Social proof avatars — same real clients featured in testimonials below */}
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.6, delay: 0.5 }}
+            className="inline-flex items-center gap-3 mt-8"
+          >
             <div className="flex -space-x-3">
-              {users.map((url, index) => (
+              {avatars.map((url, i) => (
                 <div
-                  key={index}
-                  className="w-7 h-7 rounded-full border-2 border-white overflow-hidden bg-slate-200"
+                  key={i}
+                  className="w-7 h-7 rounded-full border-2 border-background overflow-hidden bg-muted"
                 >
                   <img
                     src={url}
-                    alt="Cliente atendido"
+                    alt=""
                     className="w-full h-full object-cover"
                     loading="lazy"
                     width={28}
@@ -107,20 +139,10 @@ const HeroSection = () => {
                 </div>
               ))}
             </div>
-            <div className="text-xs font-medium text-charcoal-muted">
-              <span>Junte-se a </span>
-              <span className="text-electric font-bold">+78</span>
-              <span> empresas atendidas</span>
-            </div>
-          </div>
-
-          {/* Trust indicators */}
-          <div className="flex flex-col sm:flex-row flex-wrap items-center justify-center gap-4 sm:gap-8 text-charcoal-muted text-sm">
-            <span>🟢 Implementação em até 7 dias</span>
-            <span>🟢 +78 empresas atendidas</span>
-            <span>🟢 +R$2m auditados</span>
-          </div>
-
+            <span className="text-xs text-muted-foreground">
+              clientes reais, depoimentos abaixo
+            </span>
+          </motion.div>
         </div>
       </div>
     </section>
