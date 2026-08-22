@@ -94,7 +94,7 @@ const HeroSection = () => {
                 rel="noopener noreferrer"
                 className="flex items-center justify-center gap-3"
               >
-                <span>Solicitar Diagnóstico</span>
+                <span>Chamar no WhatsApp</span>
                 <ArrowRight className="transition-transform group-hover:translate-x-1" />
               </a>
             </Button>

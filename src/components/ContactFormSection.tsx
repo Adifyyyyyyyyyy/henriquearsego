@@ -54,7 +54,7 @@ const ContactFormSection = () => {
                 rel="noopener noreferrer"
                 className="flex items-center justify-center gap-3"
               >
-                <span>Solicitar Diagnóstico Gratuito</span>
+                <span>Chamar no WhatsApp Agora</span>
                 <ArrowRight className="transition-transform group-hover:translate-x-1" />
               </a>
             </Button>

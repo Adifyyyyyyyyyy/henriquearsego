@@ -78,7 +78,7 @@ const Header = () => {
               asChild
             >
               <a href={whatsappLink} target="_blank" rel="noopener noreferrer">
-                Solicitar Diagnóstico
+                Chamar no WhatsApp
               </a>
             </Button>
           </div>
