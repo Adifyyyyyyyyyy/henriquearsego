@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { MessageCircle } from "lucide-react";
 
 const whatsappLink =
-  "https://wa.me/5551996719696?text=Olá! Gostaria de agendar um diagnóstico para minha empresa.";
+  "https://wa.me/5551996719696?text=Olá! Gostaria de falar sobre marketing digital para minha empresa.";
 
 const WhatsAppButton = () => {
   return (

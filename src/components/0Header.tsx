@@ -7,7 +7,7 @@ const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [heroCtaPassed, setHeroCtaPassed] = useState(false);
   const whatsappLink =
-    "https://wa.me/5551996719696?text=Olá! Gostaria de agendar um diagnóstico para minha empresa.";
+    "https://wa.me/5551996719696?text=Olá! Gostaria de falar sobre marketing digital para minha empresa.";
 
   useEffect(() => {
     const handleScroll = () => setIsScrolled(window.scrollY > 20);

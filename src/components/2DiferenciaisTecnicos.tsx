@@ -43,7 +43,7 @@ const itemVariants = {
 };
 
 const whatsappLink =
-  "https://wa.me/5551996719696?text=Olá! Gostaria de agendar um diagnóstico para minha empresa.";
+  "https://wa.me/5551996719696?text=Olá! Gostaria de falar sobre marketing digital para minha empresa.";
 
 const BentoGrid = () => {
   return (
