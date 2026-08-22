@@ -14,7 +14,7 @@ const Footer = () => {
             transition={{ duration: 0.5 }}
           >
             <div className="flex items-center gap-2 mb-4">
-              <div className="w-10 h-10 rounded-xl bg-accent flex items-center justify-center overflow-hidden ring-1 ring-white/10">
+              <div className="w-10 h-10 shrink-0 rounded-xl bg-accent flex items-center justify-center overflow-hidden ring-1 ring-white/10">
                 <img
                   src="/logo.jpg"
                   alt="Logo Henrique Arsego"

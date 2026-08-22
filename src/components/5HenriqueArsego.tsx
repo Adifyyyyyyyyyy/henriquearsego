@@ -76,7 +76,7 @@ const SpecialistSection = () => {
               Consultor de Marketing Digital, atuando como especialista
               autônomo desde 2020 pra clientes B2B e B2C no Brasil e nos
               EUA — depois de anos gerindo SEO, links patrocinados e mídia em
-              agência. Formado em Ciência da Computação (UFFS) e Publicidade
+              agência. Cursou Ciência da Computação (UFFS) e Publicidade
               e Propaganda (Metodista IPA): a combinação é exatamente o que
               separa gestão de tráfego de engenharia de crescimento.
             </p>

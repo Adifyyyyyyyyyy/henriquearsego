@@ -61,7 +61,7 @@ const BentoGrid = () => {
             Diferenciais técnicos
           </span>
           <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-semibold text-foreground mb-4 tracking-tight">
-            Infraestrutura de dado{" "}
+            Infraestrutura de dados{" "}
             <span className="text-gradient-aurora">que funciona de verdade</span>
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
