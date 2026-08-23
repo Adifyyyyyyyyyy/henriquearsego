@@ -16,7 +16,7 @@ const HeroSection = () => {
 
   const stats = [
     { value: "11+", label: "anos em mídia paga & growth" },
-    { value: "20+", label: "marcas atendidas, de fintech a saúde" },
+    { value: "78+", label: "empresas atendidas" },
     { value: "100%", label: "rastreamento server-side (GTM/CAPI)" },
   ];
 
