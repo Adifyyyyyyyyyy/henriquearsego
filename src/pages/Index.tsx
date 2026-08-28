@@ -5,7 +5,6 @@ import BentoGrid from "@/components/2DiferenciaisTecnicos";
 import Verticals from "@/components/Verticals";
 import ProcessTimeline from "@/components/4Metodologia";
 import EcosystemFunnel from "@/components/FluxoMidias";
-import ConversionCalculator from "@/components/CalculadoraConversao";
 import TestimonialsSection from "@/components/TestimonialsSection";
 import Cases from "@/components/Cases";
 import ContactFormSection from "@/components/ContactFormSection";
@@ -23,7 +22,6 @@ const Index = () => {
         <Verticals />
         <ProcessTimeline />
         <EcosystemFunnel />
-        <ConversionCalculator />
         <TestimonialsSection />
         <Cases />
         <ContactFormSection />

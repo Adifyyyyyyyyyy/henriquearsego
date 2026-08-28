@@ -1,24 +1,24 @@
 import React, { useState, useEffect, useCallback } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import {
-  BarChart3, Database, Search,
-  Smartphone, Globe, Cpu, ArrowDown
+  MapPin, Share2, MessageCircle,
+  Database, Store, Cpu, ArrowDown
 } from "lucide-react";
 
 const dataSource = [
-  { id: "meta", name: "Meta Ads", sub: "Data Signals", icon: Smartphone, color: "#3B82F6", y: 32 },
-  { id: "google", name: "Google Ads", sub: "Search Intent", icon: Search, color: "#38BDF8", y: 96 },
-  { id: "capi", name: "Meta CAPI", sub: "Server Events", icon: Database, color: "#2DD4BF", y: 160 },
-  { id: "analytics", name: "GA4", sub: "User Behavior", icon: BarChart3, color: "#60A5FA", y: 224 },
-  { id: "crm", name: "CRM Data", sub: "Offline Conversions", icon: Globe, color: "#818CF8", y: 288 },
+  { id: "seo", name: "SEO & Google Meu Negócio", sub: "Busca Local", icon: MapPin, color: "#3B82F6", y: 32 },
+  { id: "social", name: "Mídia Social", sub: "Presença & Conteúdo", icon: Share2, color: "#38BDF8", y: 96 },
+  { id: "whatsapp", name: "WhatsApp", sub: "Relacionamento", icon: MessageCircle, color: "#2DD4BF", y: 160 },
+  { id: "crm", name: "CRM", sub: "Organização de Leads", icon: Database, color: "#60A5FA", y: 224 },
+  { id: "marketplace", name: "Marketplace", sub: "Venda Direta", icon: Store, color: "#818CF8", y: 288 },
 ];
 
 const insights = {
-  meta: { title: "Otimização de público", text: "Padrão de compra mapeado pra reduzir CPL com lookalike de base própria, não achismo de interesse." },
-  google: { title: "Escala de intenção", text: "Termo de busca de fundo de funil com baixa concorrência e alto ROI, isolado da campanha de marca." },
-  capi: { title: "Rastreamento sem furo", text: "Evento de servidor recuperando conversão perdida por bloqueio de cookie no iOS." },
-  analytics: { title: "Gargalo real", text: "Comportamento de usuário aponta fricção específica no funil — não estimativa, dado de sessão." },
-  crm: { title: "LTV por canal", text: "Dado de vendas cruzado com origem de mídia pra saber qual canal realmente traz cliente que fica." },
+  seo: { title: "Achado no Google", text: "Ficha do Google Meu Negócio otimizada e site bem estruturado pra aparecer no mapa e na busca local — sem depender de anúncio pago." },
+  social: { title: "Presença que conecta", text: "Conteúdo pensado pro seu público específico, não fórmula de engajamento genérico — a rede certa pro tipo de negócio que você tem." },
+  whatsapp: { title: "Relacionamento direto", text: "Atendimento organizado que transforma contato em conversa e conversa em venda, sem lead esfriando na fila." },
+  crm: { title: "Nenhum lead esquecido", text: "Histórico de contato e follow-up organizado — sem depender de memória ou planilha solta pra fechar venda." },
+  marketplace: { title: "Onde o cliente já compra", text: "Presença nos marketplaces certos pro seu produto, com ficha otimizada pra converter quem já está pronto pra comprar." },
 };
 
 const EcosystemFunnel = () => {
@@ -61,7 +61,7 @@ const EcosystemFunnel = () => {
             className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-accent/25 bg-accent/5 text-accent text-xs font-mono uppercase tracking-widest mb-5"
           >
             <Cpu size={13} />
-            O stack real
+            Onde seu cliente está
           </motion.span>
           <motion.h2
             initial={{ opacity: 0, y: -10 }}
@@ -70,7 +70,7 @@ const EcosystemFunnel = () => {
             transition={{ delay: 0.1 }}
             className="font-display text-3xl md:text-4xl lg:text-5xl font-semibold text-foreground mb-6 leading-tight tracking-tight"
           >
-            Cinco fontes de dado, <span className="text-gradient-aurora">um único painel</span>
+            Cinco canais, <span className="text-gradient-aurora">um caminho certo</span> pra vender mais
           </motion.h2>
           <motion.p
             initial={{ opacity: 0, y: 10 }}
@@ -79,7 +79,9 @@ const EcosystemFunnel = () => {
             transition={{ delay: 0.2 }}
             className="text-lg text-muted-foreground max-w-2xl mx-auto"
           >
-            É assim que Meta, Google, CAPI, GA4 e CRM conversam entre si em vez de virar cinco planilhas soltas.
+            É assim que SEO, redes sociais, WhatsApp, CRM e marketplace se
+            conectam numa estratégia só — em vez de cada canal puxar pra um
+            lado diferente.
           </motion.p>
         </div>
 

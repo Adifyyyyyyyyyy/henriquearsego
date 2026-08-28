@@ -15,9 +15,9 @@ const HeroSection = () => {
   ];
 
   const stats = [
-    { value: "11+", label: "anos em mídia paga & growth" },
+    { value: "11+", label: "anos de marketing digital" },
     { value: "78+", label: "empresas atendidas" },
-    { value: "100%", label: "rastreamento server-side (GTM/CAPI)" },
+    { value: "6", label: "frentes de marketing sob um só especialista" },
   ];
 
   return (
@@ -54,14 +54,14 @@ const HeroSection = () => {
             transition={{ duration: 0.6, delay: 0.1 }}
             className="font-display text-4xl sm:text-6xl lg:text-7xl font-semibold text-foreground leading-[1.05] tracking-tight mb-8"
           >
-            Tráfego pago com{" "}
+            Estratégia de marketing que encontra{" "}
             <span
               className="text-gradient-aurora italic inline-block"
               style={{ paddingRight: "0.15em", marginRight: "-0.15em" }}
             >
-              infraestrutura de dados
-            </span>{" "}
-            por trás — não só criativo bom e palpite.
+              o canal certo pra você vender
+            </span>
+            .
           </motion.h1>
 
           <motion.p
@@ -70,9 +70,10 @@ const HeroSection = () => {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="text-base sm:text-lg md:text-xl text-muted-foreground max-w-2xl mb-10 leading-relaxed"
           >
-            Gerencio campanhas em Meta, Google, TikTok e YouTube com
-            rastreamento server-side (GTM, GA4, CAPI), dashboards de BI e
-            automação via n8n — pra você decidir com dado real.
+            Estratégia, SEO, mídia social, WhatsApp, CRM e marketplace — sem
+            fórmula pronta. Cada negócio vende de um jeito, e meu trabalho é
+            achar qual caminho funciona pro seu, com foco especial em
+            negócio local e Google Meu Negócio.
           </motion.p>
 
           <motion.div

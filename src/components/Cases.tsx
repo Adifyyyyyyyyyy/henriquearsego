@@ -32,7 +32,7 @@ const Cases = () => {
             Print da tela, <span className="text-gradient-aurora">não da promessa</span>
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Resultado direto do painel de campanha, sem edição.
+            Resultado real de cada estratégia, sem edição.
           </p>
         </motion.div>
 

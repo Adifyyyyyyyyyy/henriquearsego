@@ -49,7 +49,7 @@ const SpecialistSection = () => {
               >
                 <Award className="w-5 h-5 shrink-0" />
                 <span className="font-semibold text-sm md:text-base text-center tracking-tight">
-                  11+ anos em growth & mídia paga
+                  11+ anos em marketing digital
                 </span>
               </motion.div>
             </div>
@@ -65,7 +65,7 @@ const SpecialistSection = () => {
           >
             <div>
               <span className="font-mono text-accent text-xs uppercase tracking-[0.2em]">
-                O especialista por trás dos dados
+                O estrategista por trás do canal certo
               </span>
               <h2 className="font-display text-4xl md:text-5xl font-semibold text-foreground mt-3 tracking-tight">
                 Henrique Arsego
@@ -74,11 +74,12 @@ const SpecialistSection = () => {
 
             <p className="text-muted-foreground text-lg leading-relaxed">
               Consultor de Marketing Digital, atuando como especialista
-              autônomo desde 2020 pra clientes B2B e B2C no Brasil e nos
-              EUA — depois de anos gerindo SEO, links patrocinados e mídia em
-              agência. Cursou Ciência da Computação (UFFS) e Publicidade
-              e Propaganda (Metodista IPA): a combinação é exatamente o que
-              separa gestão de tráfego de engenharia de crescimento.
+              autônomo desde 2020 pra negócios locais e nacionais no Brasil e
+              nos EUA — depois de anos gerindo SEO, mídia paga e redes
+              sociais em agência. Cursou Ciência da Computação (UFFS) e
+              Publicidade e Propaganda (Metodista IPA): a combinação é o que
+              me ajuda a achar o canal certo pra cada negócio, não aplicar a
+              mesma fórmula pra todo mundo.
             </p>
 
             {/* Certifications */}

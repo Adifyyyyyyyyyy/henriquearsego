@@ -1,35 +1,35 @@
 import { useRef } from "react";
 import { motion, useScroll, useSpring } from "framer-motion";
-import { Search, Settings, Rocket, RefreshCw, ArrowRight } from "lucide-react";
+import { Search, Compass, Settings, Rocket, RefreshCw, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const steps = [
   {
     icon: Search,
-    title: "Auditoria de Dados",
+    title: "Diagnóstico de Canais",
     description:
-      "Análise completa da infraestrutura atual de tracking, identificando gaps de mensuração e oportunidades de melhoria.",
+      "Mapeio onde seu cliente ideal está — busca, redes sociais, indicação, marketplace — e onde sua presença hoje está fraca ou ausente.",
     duration: "Semana 1",
   },
   {
-    icon: Settings,
-    title: "Implementação de Infra",
+    icon: Compass,
+    title: "Estratégia sob Medida",
     description:
-      "Configuração de CAPI, GTM server-side, integrações com CRM e dashboards personalizados.",
-    duration: "Semanas 2-3",
+      "Defino o caminho certo pro seu negócio: SEO, mídia social, WhatsApp, CRM ou marketplace — na combinação que faz sentido pro seu caso, não um pacote fechado.",
+    duration: "Semana 2",
   },
   {
     icon: Rocket,
-    title: "Geração de Demanda",
+    title: "Implementação",
     description:
-      "Início das campanhas de tráfego pago com base em dado preciso e estratégia de escala por canal.",
-    duration: "Semana 4+",
+      "Coloco a estratégia em prática: Google Meu Negócio, conteúdo, atendimento organizado e presença nos canais certos.",
+    duration: "Semanas 3-4",
   },
   {
     icon: RefreshCw,
-    title: "Otimização Contínua",
+    title: "Acompanhamento e Ajuste",
     description:
-      "Monitoramento constante, testes A/B e ajuste de verba pra maximizar ROI e reduzir custo por aquisição.",
+      "Acompanho o resultado real e ajusto o caminho conforme o negócio responde — sem depender de fórmula genérica.",
     duration: "Contínuo",
   },
 ];
@@ -73,7 +73,7 @@ const ProcessTimeline = () => {
             Processo <span className="text-gradient-aurora">simples e efetivo</span>
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-            Do diagnóstico à escala em semanas, não meses.
+            Do diagnóstico ao canal certo, em semanas — não meses.
           </p>
         </motion.div>
 
@@ -137,7 +137,7 @@ const ProcessTimeline = () => {
           className="text-center mt-20"
         >
           <p className="text-muted-foreground mb-8 text-lg">
-            Pronto pra ver onde sua mídia está travando?
+            Pronto pra descobrir o canal certo pro seu negócio?
           </p>
           <Button variant="cta" size="xl" asChild className="group">
             <a href={whatsappLink} target="_blank" rel="noopener noreferrer" className="flex items-center gap-3">

@@ -24,8 +24,9 @@ const Footer = () => {
               <span className="font-display text-xl font-semibold">Henrique Arsego</span>
             </div>
             <p className="text-muted-foreground leading-relaxed">
-              Consultor de Marketing Digital. Tráfego pago com infraestrutura
-              de dados — não só criativo bom e palpite.
+              Consultor de Marketing Digital. Encontro o canal certo pro seu
+              negócio vender — sem fórmula pronta, com foco especial em
+              negócio local.
             </p>
           </motion.div>
 
@@ -38,10 +39,10 @@ const Footer = () => {
           >
             <h4 className="font-display text-lg font-semibold mb-4">Serviços</h4>
             <ul className="space-y-2 text-muted-foreground">
-              <li className="hover:text-accent transition-colors cursor-pointer">Gestão de Tráfego Pago (Meta, Google, TikTok)</li>
-              <li className="hover:text-accent transition-colors cursor-pointer">Tagueamento Avançado (CAPI/GTM Server-Side)</li>
-              <li className="hover:text-accent transition-colors cursor-pointer">Dashboards de BI em Tempo Real</li>
-              <li className="hover:text-accent transition-colors cursor-pointer">Automação com n8n</li>
+              <li className="hover:text-accent transition-colors cursor-pointer">Estratégia de Marketing Digital</li>
+              <li className="hover:text-accent transition-colors cursor-pointer">SEO e Google Meu Negócio</li>
+              <li className="hover:text-accent transition-colors cursor-pointer">Mídia Social Estratégica</li>
+              <li className="hover:text-accent transition-colors cursor-pointer">WhatsApp, CRM e Marketplace</li>
             </ul>
           </motion.div>
 

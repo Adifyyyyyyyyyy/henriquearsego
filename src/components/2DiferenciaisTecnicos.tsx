@@ -1,33 +1,33 @@
 import { motion } from "framer-motion";
-import { Workflow, LineChart, TrendingUp, Terminal, Zap } from "lucide-react";
+import { Compass, MapPin, Share2, Store, Zap } from "lucide-react";
 
 const features = [
   {
-    icon: Terminal,
-    title: "Rastreamento com precisão",
+    icon: Compass,
+    title: "Diagnóstico de canais",
     description:
-      "GTM server-side, GA4, Pixel e API de Conversões (CAPI) implementados pra fechar o buraco das UTMs e devolver dado confiável pra otimização.",
+      "Antes de sugerir qualquer ação, mapeio onde seu cliente ideal realmente está — busca, redes sociais, indicação, WhatsApp ou marketplace. O esforço vai pro canal que sua audiência já usa, não pro que está na moda.",
     large: true,
   },
   {
-    icon: Workflow,
-    title: "Automação com n8n",
+    icon: MapPin,
+    title: "SEO e Google Meu Negócio",
     description:
-      "Tráfego conectado direto ao CRM e ao WhatsApp via API — lead qualificado chega em tempo real, sem planilha no meio do caminho.",
+      "Presença de negócio local bem estruturada pra aparecer no mapa e na busca quando alguém perto de você procura o que você vende.",
     large: false,
   },
   {
-    icon: LineChart,
-    title: "Dashboards de BI",
+    icon: Share2,
+    title: "Mídia social estratégica",
     description:
-      "Dado bruto virando painel acionável. Decisão de mídia baseada em número atualizado, não em relatório manual de sexta à tarde.",
+      "Conteúdo e posicionamento pensados pro seu público específico — não fórmula genérica de engajamento.",
     large: false,
   },
   {
-    icon: TrendingUp,
-    title: "Geração de demanda",
+    icon: Store,
+    title: "WhatsApp, CRM e marketplace",
     description:
-      "Estratégia de mídia paga (Meta, Google, TikTok, YouTube) desenhada pra funil de conversão real — B2B e B2C, com otimização orientada a ROI.",
+      "Organização do atendimento, funil de relacionamento com o cliente e presença nos marketplaces certos pra transformar contato em venda.",
     large: true,
   },
 ];
@@ -57,16 +57,17 @@ const BentoGrid = () => {
           className="text-center mb-16"
         >
           <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-accent/25 bg-accent/5 text-accent text-xs font-mono uppercase tracking-widest mb-5">
-            <Terminal size={14} />
-            Diferenciais técnicos
+            <Compass size={14} />
+            Como eu trabalho
           </span>
           <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-semibold text-foreground mb-4 tracking-tight">
-            Infraestrutura de dados{" "}
-            <span className="text-gradient-aurora">que funciona de verdade</span>
+            O canal certo{" "}
+            <span className="text-gradient-aurora">pro seu negócio vender</span>
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Não é só relatório bonito. É a infraestrutura completa — do pixel
-            ao dashboard — pra escalar mídia com base em número real.
+            Não existe fórmula única de marketing. Cada negócio tem um
+            caminho diferente pra vender mais — meu trabalho é descobrir
+            qual é o seu.
           </p>
         </motion.div>
 
@@ -116,10 +117,10 @@ const BentoGrid = () => {
           className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-8 border-t border-white/8 pt-12"
         >
           {[
-            { value: "100%", label: "precisão no rastreamento de eventos" },
-            { value: "n8n", label: "automação entre Meta, Google, TikTok e CRM" },
-            { value: "GA4", label: "arquitetura de dados server-side" },
-            { value: "24/7", label: "campanhas monitoradas" },
+            { value: "6", label: "canais avaliados em cada diagnóstico" },
+            { value: "SEO", label: "e Google Meu Negócio pra negócio local" },
+            { value: "CRM", label: "organização de leads e relacionamento" },
+            { value: "1:1", label: "estratégia sob medida, sem fórmula pronta" },
           ].map((stat) => (
             <div key={stat.label} className="text-center">
               <div className="font-mono text-2xl lg:text-3xl font-semibold text-accent mb-1">

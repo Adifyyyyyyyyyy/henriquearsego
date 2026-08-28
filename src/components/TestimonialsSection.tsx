@@ -77,7 +77,7 @@ const TestimonialsSection = () => {
           Resultados que falam por <span className="text-gradient-aurora">si</span>
         </h2>
         <p className="text-muted-foreground max-w-2xl mx-auto">
-          Clientes que escalaram a operação de mídia com essa metodologia.
+          Clientes que encontraram o canal certo pra vender mais.
         </p>
       </div>
 
