@@ -6,7 +6,7 @@ const features = [
     icon: Compass,
     title: "Diagnóstico de canais",
     description:
-      "Antes de sugerir qualquer ação, mapeio onde seu cliente ideal realmente está — busca, redes sociais, indicação, WhatsApp ou marketplace. O esforço vai pro canal que sua audiência já usa, não pro que está na moda.",
+      "Antes de sugerir qualquer ação, mapeio onde seu cliente ideal realmente está — busca, redes sociais, indicação, WhatsApp, marketplace ou e-commerce. O esforço vai pro canal que sua audiência já usa, não pro que está na moda.",
     large: true,
   },
   {
@@ -25,9 +25,9 @@ const features = [
   },
   {
     icon: Store,
-    title: "WhatsApp, CRM e marketplace",
+    title: "WhatsApp, CRM, marketplace e e-commerce",
     description:
-      "Organização do atendimento, funil de relacionamento com o cliente e presença nos marketplaces certos pra transformar contato em venda.",
+      "Organização do atendimento, funil de relacionamento com o cliente e presença nos marketplaces certos ou numa loja própria pra transformar contato em venda.",
     large: true,
   },
 ];

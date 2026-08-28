@@ -42,7 +42,7 @@ const Footer = () => {
               <li className="hover:text-accent transition-colors cursor-pointer">Estratégia de Marketing Digital</li>
               <li className="hover:text-accent transition-colors cursor-pointer">SEO e Google Meu Negócio</li>
               <li className="hover:text-accent transition-colors cursor-pointer">Mídia Social Estratégica</li>
-              <li className="hover:text-accent transition-colors cursor-pointer">WhatsApp, CRM e Marketplace</li>
+              <li className="hover:text-accent transition-colors cursor-pointer">WhatsApp, CRM, Marketplace e E-commerce</li>
             </ul>
           </motion.div>
 

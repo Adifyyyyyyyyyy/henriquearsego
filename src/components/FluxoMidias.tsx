@@ -10,7 +10,7 @@ const dataSource = [
   { id: "social", name: "Mídia Social", sub: "Presença & Conteúdo", icon: Share2, color: "#38BDF8", y: 96 },
   { id: "whatsapp", name: "WhatsApp", sub: "Relacionamento", icon: MessageCircle, color: "#2DD4BF", y: 160 },
   { id: "crm", name: "CRM", sub: "Organização de Leads", icon: Database, color: "#60A5FA", y: 224 },
-  { id: "marketplace", name: "Marketplace", sub: "Venda Direta", icon: Store, color: "#818CF8", y: 288 },
+  { id: "marketplace", name: "Marketplace & E-commerce", sub: "Venda Direta", icon: Store, color: "#818CF8", y: 288 },
 ];
 
 const insights = {
@@ -18,7 +18,7 @@ const insights = {
   social: { title: "Presença que conecta", text: "Conteúdo pensado pro seu público específico, não fórmula de engajamento genérico — a rede certa pro tipo de negócio que você tem." },
   whatsapp: { title: "Relacionamento direto", text: "Atendimento organizado que transforma contato em conversa e conversa em venda, sem lead esfriando na fila." },
   crm: { title: "Nenhum lead esquecido", text: "Histórico de contato e follow-up organizado — sem depender de memória ou planilha solta pra fechar venda." },
-  marketplace: { title: "Onde o cliente já compra", text: "Presença nos marketplaces certos pro seu produto, com ficha otimizada pra converter quem já está pronto pra comprar." },
+  marketplace: { title: "Onde o cliente já compra", text: "Presença nos marketplaces certos e loja própria de e-commerce, com ficha otimizada pra converter quem já está pronto pra comprar." },
 };
 
 const EcosystemFunnel = () => {
@@ -79,7 +79,8 @@ const EcosystemFunnel = () => {
             transition={{ delay: 0.2 }}
             className="text-lg text-muted-foreground max-w-2xl mx-auto"
           >
-            É assim que SEO, redes sociais, WhatsApp, CRM e marketplace se
+            É assim que SEO, redes sociais, WhatsApp, CRM, marketplace e
+            e-commerce se
             conectam numa estratégia só — em vez de cada canal puxar pra um
             lado diferente.
           </motion.p>

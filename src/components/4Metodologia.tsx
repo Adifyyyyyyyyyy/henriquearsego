@@ -8,14 +8,14 @@ const steps = [
     icon: Search,
     title: "Diagnóstico de Canais",
     description:
-      "Mapeio onde seu cliente ideal está — busca, redes sociais, indicação, marketplace — e onde sua presença hoje está fraca ou ausente.",
+      "Mapeio onde seu cliente ideal está — busca, redes sociais, indicação, marketplace e e-commerce — e onde sua presença hoje está fraca ou ausente.",
     duration: "Semana 1",
   },
   {
     icon: Compass,
     title: "Estratégia sob Medida",
     description:
-      "Defino o caminho certo pro seu negócio: SEO, mídia social, WhatsApp, CRM ou marketplace — na combinação que faz sentido pro seu caso, não um pacote fechado.",
+      "Defino o caminho certo pro seu negócio: SEO, mídia social, WhatsApp, CRM, marketplace ou e-commerce — na combinação que faz sentido pro seu caso, não um pacote fechado.",
     duration: "Semana 2",
   },
   {
