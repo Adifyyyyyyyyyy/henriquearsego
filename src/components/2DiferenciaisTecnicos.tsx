@@ -117,10 +117,10 @@ const BentoGrid = () => {
           className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-8 border-t border-white/8 pt-12"
         >
           {[
-            { value: "6", label: "canais avaliados em cada diagnóstico" },
-            { value: "SEO", label: "e Google Meu Negócio pra negócio local" },
-            { value: "CRM", label: "organização de leads e relacionamento" },
-            { value: "1:1", label: "estratégia sob medida, sem fórmula pronta" },
+            { value: "Meta Ads", label: "campanhas certeiras em Instagram e Facebook" },
+            { value: "Google Search", label: "quem já procura pelo que você vende" },
+            { value: "WhatsApp", label: "atendimento que transforma contato em venda" },
+            { value: "GA4", label: "dado real por trás de cada decisão" },
           ].map((stat) => (
             <div key={stat.label} className="text-center">
               <div className="font-mono text-2xl lg:text-3xl font-semibold text-accent mb-1">
