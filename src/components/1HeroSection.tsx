@@ -70,10 +70,10 @@ const HeroSection = () => {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="text-base sm:text-lg md:text-xl text-muted-foreground max-w-2xl mb-10 leading-relaxed"
           >
-            Estratégia, SEO, mídia social, WhatsApp, CRM, marketplace e
+            Mídia Paga, SEO, mídia social, WhatsApp, CRM, marketplace e
             e-commerce — sem
             fórmula pronta. Cada negócio vende de um jeito, e meu trabalho é
-            achar qual caminho funciona pro seu.
+            achar qual caminho funciona para o seu.
           </motion.p>
 
           <motion.div

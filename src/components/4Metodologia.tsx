@@ -15,7 +15,7 @@ const steps = [
     icon: Compass,
     title: "Estratégia sob Medida",
     description:
-      "Defino o caminho certo pro seu negócio: SEO, mídia social, WhatsApp, CRM, marketplace ou e-commerce — na combinação que faz sentido pro seu caso, não um pacote fechado.",
+      "Defino o caminho certo para o seu negócio: SEO, mídia social, WhatsApp, CRM, marketplace ou e-commerce — na combinação que faz sentido para o seu caso, não um pacote fechado.",
     duration: "Semana 2",
   },
   {
@@ -137,7 +137,7 @@ const ProcessTimeline = () => {
           className="text-center mt-20"
         >
           <p className="text-muted-foreground mb-8 text-lg">
-            Pronto pra descobrir o canal certo pro seu negócio?
+            Pronto pra descobrir o canal certo para o seu negócio?
           </p>
           <Button variant="cta" size="xl" asChild className="group">
             <a href={whatsappLink} target="_blank" rel="noopener noreferrer" className="flex items-center gap-3">

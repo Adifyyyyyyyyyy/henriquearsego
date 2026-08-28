@@ -24,8 +24,8 @@ const Footer = () => {
               <span className="font-display text-xl font-semibold">Henrique Arsego</span>
             </div>
             <p className="text-muted-foreground leading-relaxed">
-              Consultor de Marketing Digital. Encontro o canal certo pro seu
-              negócio vender — sem fórmula pronta, com foco especial em
+              Consultor de Marketing Digital. Encontro o canal certo para o
+              seu negócio vender — sem fórmula pronta, com foco especial em
               negócio local.
             </p>
           </motion.div>

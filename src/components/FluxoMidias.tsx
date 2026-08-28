@@ -15,7 +15,7 @@ const dataSource = [
 
 const insights = {
   seo: { title: "Achado no Google", text: "Ficha do Google Meu Negócio otimizada e site bem estruturado pra aparecer no mapa e na busca local — sem depender de anúncio pago." },
-  social: { title: "Presença que conecta", text: "Conteúdo pensado pro seu público específico, não fórmula de engajamento genérico — a rede certa pro tipo de negócio que você tem." },
+  social: { title: "Presença que conecta", text: "Conteúdo pensado para o seu público específico, não fórmula de engajamento genérico — a rede certa pro tipo de negócio que você tem." },
   whatsapp: { title: "Relacionamento direto", text: "Atendimento organizado que transforma contato em conversa e conversa em venda, sem lead esfriando na fila." },
   crm: { title: "Nenhum lead esquecido", text: "Histórico de contato e follow-up organizado — sem depender de memória ou planilha solta pra fechar venda." },
   marketplace: { title: "Onde o cliente já compra", text: "Presença nos marketplaces certos e loja própria de e-commerce, com ficha otimizada pra converter quem já está pronto pra comprar." },

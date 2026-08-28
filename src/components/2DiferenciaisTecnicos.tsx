@@ -20,7 +20,7 @@ const features = [
     icon: Share2,
     title: "Mídia social estratégica",
     description:
-      "Conteúdo e posicionamento pensados pro seu público específico — não fórmula genérica de engajamento.",
+      "Conteúdo e posicionamento pensados para o seu público específico — não fórmula genérica de engajamento.",
     large: false,
   },
   {
@@ -62,7 +62,7 @@ const BentoGrid = () => {
           </span>
           <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-semibold text-foreground mb-4 tracking-tight">
             O canal certo{" "}
-            <span className="text-gradient-aurora">pro seu negócio vender</span>
+            <span className="text-gradient-aurora">para o seu negócio vender</span>
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
             Não existe fórmula única de marketing. Cada negócio tem um
